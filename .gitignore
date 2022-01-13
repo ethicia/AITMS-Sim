@@ -31,3 +31,7 @@ sysinfo.txt
 
 # Builds
 *.apk
+.vscode/settings.json
+
+# Manually Added
+*.log
