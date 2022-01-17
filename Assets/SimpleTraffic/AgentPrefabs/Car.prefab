@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 54332802244314528}
   - component: {fileID: 195682654740579306}
   - component: {fileID: 114145308991719604}
+  - component: {fileID: 3379054510220289932}
   m_Layer: 0
   m_Name: Car
   m_TagString: Gib
@@ -150,8 +151,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+<<<<<<< HEAD
   maxSpeed: 40
   front: {fileID: 4118226237734090}
+=======
+  maxSpeed: 20
+  front: {fileID: 4118226237734090}
+--- !u!114 &3379054510220289932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623311671667096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a061561a4894bc3a9fd55bae51d3660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  movingSpeed: 0
+  minHaltDuration: 2
+  status: 0
+  totalHaltDuration: 0
+  haltCount: 0
+  avgHaltDuration: 0
+>>>>>>> 5f8d95fa1f70c19034d7a31c70749131b3f45ffd
 --- !u!1 &1813463833871512
 GameObject:
   m_ObjectHideFlags: 0
