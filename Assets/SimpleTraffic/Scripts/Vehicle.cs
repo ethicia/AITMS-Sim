@@ -68,6 +68,10 @@ namespace Kawaiiju
 				if(connection.navSection != m_CurrentNavSection)
 					SwitchRoad(connection);
 			}
+			if(col.tag == "Detroyer")
+            {
+				Destroy(this.gameObject);
+            }
 			base.OnTriggerEnter(col);
 		}
 

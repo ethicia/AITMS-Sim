@@ -31,7 +31,7 @@ namespace  Kawaiiju.Traffic
 		public GameObject trainCarriagePrefab; // TODO - Get from object pool
 		public Transform pool;	// TODO - Get from object pool
 		public bool spawnOnStart = true;
-		public int maxRoadVehicles = 100;
+		public int maxRoadVehicles = 150;
 		public int maxTrains = 0;
 		public int maxPedestrians = 0;
 
