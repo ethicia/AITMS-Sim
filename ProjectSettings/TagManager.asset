@@ -12,6 +12,7 @@ TagManager:
   - RoadConnection
   - Tailgate
   - TrainJunction
+  - Detroyer
   layers:
   - Default
   - TransparentFX
