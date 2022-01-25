@@ -20,6 +20,7 @@ namespace Kawaiiju
         [HideInInspector] public int haltCount;
         [HideInInspector] public float avgHaltDuration;
         private long stopTime;
+        private float haltDuration;
 
 
         // Start is called before the first frame update
@@ -30,22 +31,24 @@ namespace Kawaiiju
             totalHaltDuration = 0;
             haltCount = 0;
             avgHaltDuration = 0;
+            haltDuration = 0;
         }
 
         // Update is called once per frame
         void Update()
         {
             float velocity = agent.velocity.magnitude;
+            haltDuration += Time.deltaTime;
 
             switch (status)
             {
                 case Status.Moving:
                     {
+                        haltDuration = 0;
                         //check for halt
                         if (velocity <= movingSpeed)
                         {
                             status = Status.Halt;
-                            stopTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
                         }
                         break;
                     }
@@ -56,14 +59,13 @@ namespace Kawaiiju
                         if (velocity > movingSpeed)
                         {
                             status = Status.Moving;
-                            //calculate halt duration
-                            float haltDuration = (DateTimeOffset.Now.ToUnixTimeMilliseconds() - stopTime) / 1000.0f;
+
                             if (haltDuration >= minHaltDuration)
                             {
                                 totalHaltDuration += haltDuration;
                                 haltCount++;
                                 avgHaltDuration = totalHaltDuration / haltCount;
-
+                                haltDuration = 0;
                                 //Debug.Log("Halt Duration: " + haltDuration);
                                 //Debug.Log("Total Duration: " + totalHaltDuration);
                                 //Debug.Log("Halt Count: " + haltCount);
