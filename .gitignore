@@ -31,14 +31,11 @@ sysinfo.txt
 
 # Builds
 *.apk
-<<<<<<< HEAD
 *.log
 *.log
 *.log
-=======
 .vscode/settings.json
 
 # Manually Added
 *.log
 Directory.Build.props
->>>>>>> 5f8d95fa1f70c19034d7a31c70749131b3f45ffd
