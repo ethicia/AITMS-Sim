@@ -19,11 +19,15 @@ namespace Kawaiiju.Traffic
         public PhaseType type = PhaseType.Timed;
         public Phase[] phases;
         public JunctionTrigger[] triggers;
-        public float phaseInterval = 5;
+        private float phaseInterval = 5;
+        public float minimumPhaseInterval = 3;
+        public float maximumPhaseInterval = 10;
+        public float averageTime = 1;
         public int firstLaneCount = 0;
         public int secondLaneCount = 0;
         public int thirdLaneCount = 0;
         public int fourthLaneCount = 0;
+        public bool debug = false;
         [HideInInspector] public GameObject another;
         public LaneVehicleCount firstLaneBox;
         public LaneVehicleCount secondLaneBox;
@@ -34,6 +38,7 @@ namespace Kawaiiju.Traffic
 
         public override void Start()
         {
+            phaseInterval = 5;
             base.Start();
             if (phases.Length > 0)
                 phases[0].Enable();
@@ -94,7 +99,41 @@ namespace Kawaiiju.Traffic
                 m_CurrentPhase++;
             else
                 m_CurrentPhase = 0;
+            
+            //calculating phase interval
+            switch(m_CurrentPhase){
+                case 0: phaseInterval = (firstLaneCount * averageTime)/5;
+                if(debug)
+                Debug.Log("count " + firstLaneCount);
+                break;
+                
+                case 1: phaseInterval = (secondLaneCount * averageTime)/5;
+                if(debug)
+                Debug.Log("count " + secondLaneCount);
+                break;
+
+                case 3: phaseInterval = (thirdLaneCount * averageTime)/5;
+                if(debug)
+                Debug.Log("count " + thirdLaneCount);
+                break;
+
+                case 2: phaseInterval = (fourthLaneCount * averageTime)/5;
+                if(debug)
+                Debug.Log("count " + fourthLaneCount);
+                break;
+            }
+
+            //boundary condition
+            phaseInterval = Math.Max(phaseInterval,minimumPhaseInterval);
+            phaseInterval = Math.Min(phaseInterval,maximumPhaseInterval);
+
             phases[m_CurrentPhase].Enable();
+
+            if(debug){
+                Debug.Log("changing to phase " + m_CurrentPhase);
+                Debug.Log("phase interval "+ phaseInterval.ToString());
+                //Debug.Log("vehicle count "+)
+            }
         }
 
         public void TryChangePhase()

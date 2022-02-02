@@ -322,15 +322,18 @@ MonoBehaviour:
     - {fileID: 114719493367214846}
   triggers: []
   phaseInterval: 20
+  minimumPhaseInterval: 1
+  maximumPhaseInterval: 5
+  averageTime: 1
   firstLaneCount: 0
-  secondrow: 0
-  thirdrow: 0
-  fourrow: 0
+  secondLaneCount: 0
+  thirdLaneCount: 0
+  fourthLaneCount: 0
   another: {fileID: 0}
-  firstLaneBox: {fileID: 0}
-  secondLane: {fileID: 0}
-  thirdLane: {fileID: 0}
-  FourthLane: {fileID: 0}
+  firstLaneBox: {fileID: 3816578658446167645}
+  secondLaneBox: {fileID: 5213365257525778015}
+  thirdLaneBox: {fileID: 3183345850917163176}
+  fourthLaneBox: {fileID: 5797789532990774182}
 --- !u!1 &1107694173655360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,8 +1057,8 @@ Transform:
   m_Children:
   - {fileID: 4133727548711226}
   - {fileID: 4669788300940478}
-  - {fileID: 4164339561034560}
   - {fileID: 4691078859867342}
+  - {fileID: 4164339561034560}
   - {fileID: 4196203466662796}
   - {fileID: 4181309784912672}
   - {fileID: 4280368128225054}
@@ -1441,7 +1444,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4503968648620682}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!33 &33300828091687918
 MeshFilter:
@@ -5582,7 +5585,7 @@ Transform:
   m_LocalScale: {x: 0.099999994, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4503968648620682}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!33 &33191862290980278
 MeshFilter:
@@ -6130,8 +6133,8 @@ GameObject:
   - component: {fileID: 7756388193971442580}
   - component: {fileID: 5213365257525778015}
   m_Layer: 0
-  m_Name: FourthLane
-  m_TagString: FourthLane
+  m_Name: SecondLane
+  m_TagString: SecondLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6239,8 +6242,8 @@ GameObject:
   - component: {fileID: 4314788264234167}
   - component: {fileID: 3816578658446167645}
   m_Layer: 0
-  m_Name: ThirdLane
-  m_TagString: ThirdLane
+  m_Name: FirstLane
+  m_TagString: FirstLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6348,8 +6351,8 @@ GameObject:
   - component: {fileID: 7221910560423270703}
   - component: {fileID: 5797789532990774182}
   m_Layer: 0
-  m_Name: SecondLane
-  m_TagString: SecondLane
+  m_Name: FourthLane
+  m_TagString: FourthLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6457,8 +6460,8 @@ GameObject:
   - component: {fileID: 7566217011412869897}
   - component: {fileID: 3183345850917163176}
   m_Layer: 0
-  m_Name: FirstLane
-  m_TagString: FirstLane
+  m_Name: ThirdLane
+  m_TagString: ThirdLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
