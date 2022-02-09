@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 114784332008515400}
   m_Layer: 0
   m_Name: Road_Crossroad
-  m_TagString: Untagged
+  m_TagString: Cross
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,6 @@ MonoBehaviour:
     - {fileID: 114274015465546360}
     - {fileID: 114719493367214846}
   triggers: []
-  phaseInterval: 20
   minimumPhaseInterval: 1
   maximumPhaseInterval: 5
   averageTime: 1
@@ -329,6 +328,7 @@ MonoBehaviour:
   secondLaneCount: 0
   thirdLaneCount: 0
   fourthLaneCount: 0
+  debug: 0
   another: {fileID: 0}
   firstLaneBox: {fileID: 3816578658446167645}
   secondLaneBox: {fileID: 5213365257525778015}

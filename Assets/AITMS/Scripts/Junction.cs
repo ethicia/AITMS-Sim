@@ -44,15 +44,6 @@ namespace Kawaiiju.Traffic
                 phases[0].Enable();
             foreach (JunctionTrigger jt in triggers)
                 jt.junction = this;
-            //another = GameObject.FindGameObjectWithTag("FirstLane");
-            //firstLaneBox = another.GetComponent<LaneVehicleCount>();
-            //another = GameObject.FindGameObjectWithTag("SecondLane");
-            //secondLaneBox = another.GetComponent<LaneVehicleCount>();
-            //another = GameObject.FindGameObjectWithTag("ThirdLane");
-            //thirdLaneBox = another.GetComponent<LaneVehicleCount>();
-            //another = GameObject.FindGameObjectWithTag("FourthLane");
-            //fourthLaneBox = another.GetComponent<LaneVehicleCount>();
-
         }
 
         // -------------------------------------------------------------------
@@ -99,30 +90,62 @@ namespace Kawaiiju.Traffic
                 m_CurrentPhase++;
             else
                 m_CurrentPhase = 0;
-            
+            //another = GameObject.FindGameObjectWithTag("Cross");
             //calculating phase interval
-            switch(m_CurrentPhase){
-                case 0: phaseInterval = (firstLaneCount * averageTime)/5;
-                if(debug)
-                Debug.Log("count " + firstLaneCount);
-                break;
-                
-                case 1: phaseInterval = (secondLaneCount * averageTime)/5;
-                if(debug)
-                Debug.Log("count " + secondLaneCount);
-                break;
+            if (gameObject.tag == "Cross")
+            {
+                switch (m_CurrentPhase)
+                {
+                    case 0:
+                        phaseInterval = (firstLaneCount * averageTime) / 5;
+                        if (debug)
+                            Debug.Log("count " + firstLaneCount);
+                        break;
 
-                case 3: phaseInterval = (thirdLaneCount * averageTime)/5;
-                if(debug)
-                Debug.Log("count " + thirdLaneCount);
-                break;
+                    case 1:
+                        phaseInterval = (secondLaneCount * averageTime) / 5;
+                        if (debug)
+                            Debug.Log("count " + secondLaneCount);
+                        break;
 
-                case 2: phaseInterval = (fourthLaneCount * averageTime)/5;
-                if(debug)
-                Debug.Log("count " + fourthLaneCount);
-                break;
+                    case 3:
+                        phaseInterval = (thirdLaneCount * averageTime) / 5;
+                        if (debug)
+                            Debug.Log("count " + thirdLaneCount);
+                        break;
+
+                    case 2:
+                        phaseInterval = (fourthLaneCount * averageTime) / 5;
+                        if (debug)
+                            Debug.Log("count " + fourthLaneCount);
+                        break;
+                }
             }
+            else
+            {
+                if(debug)
+                Debug.Log("T triggered");
+                switch (m_CurrentPhase)
+                {
+                    case 0:
+                        phaseInterval = (firstLaneCount * averageTime) / 4;
+                        if (debug)
+                            Debug.Log("count " + firstLaneCount);
+                        break;
 
+                    case 1:
+                        phaseInterval = (secondLaneCount * averageTime) / 4;
+                        if (debug)
+                            Debug.Log("count " + secondLaneCount);
+                        break;
+
+                    case 3:
+                        phaseInterval = (thirdLaneCount * averageTime) / 4;
+                        if (debug)
+                            Debug.Log("count " + thirdLaneCount);
+                        break;
+                }
+            }
             //boundary condition
             phaseInterval = Math.Max(phaseInterval,minimumPhaseInterval);
             phaseInterval = Math.Min(phaseInterval,maximumPhaseInterval);

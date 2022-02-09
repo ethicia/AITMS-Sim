@@ -503,7 +503,7 @@ PrefabInstance:
     - target: {fileID: 114784332008515400, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
       propertyPath: debug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114784332008515400, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
@@ -1700,7 +1700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &483687643
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.016666668
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: ef4abcb0e31f4443db3e6f12a6c795e7, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6cea6de8557003b4ca46941777993bb0, type: 2}
 --- !u!4 &484903462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4072158857619150, guid: 847f27f01186543348cacb2b5664f506,
@@ -2363,6 +2363,31 @@ PrefabInstance:
     - target: {fileID: 4812139755637328, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114186093999670, guid: b2f226b44ff9c4a0ba7cf62544d529be,
+        type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114186093999670, guid: b2f226b44ff9c4a0ba7cf62544d529be,
+        type: 3}
+      propertyPath: speedLimit
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114186093999670, guid: b2f226b44ff9c4a0ba7cf62544d529be,
+        type: 3}
+      propertyPath: averageTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114186093999670, guid: b2f226b44ff9c4a0ba7cf62544d529be,
+        type: 3}
+      propertyPath: maximumPhaseInterval
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114186093999670, guid: b2f226b44ff9c4a0ba7cf62544d529be,
+        type: 3}
+      propertyPath: minimumPhaseInterval
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114911117245880760, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
