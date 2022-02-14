@@ -5470,7 +5470,7 @@ MonoBehaviour:
   drawGizmos: 1
   pedestrianPrefab: {fileID: 1815671103046582, guid: 13e94d706a97743bca48ccf3d1ac0d6c,
     type: 3}
-  vehiclePrefab: {fileID: 1623311671667096, guid: 1daf70c186c22473a9bfaed829aea442,
+  vehiclePrefab: {fileID: 2222498267411284090, guid: eb6d73468e98d4f4fa7c9437a6528e0f,
     type: 3}
   trainPrefab: {fileID: 1623311671667096, guid: 70009b9623f3b418ebf52b65ffabc07b,
     type: 3}
@@ -9198,7 +9198,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 135b65dda92e2984d83c89d815af0072, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a83b5cb4db986b44193b17cafc96f50a, type: 2}
 --- !u!1001 &1361939620
 PrefabInstance:
   m_ObjectHideFlags: 0
