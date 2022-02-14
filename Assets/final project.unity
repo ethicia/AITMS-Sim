@@ -5478,7 +5478,10 @@ MonoBehaviour:
     type: 3}
   pool: {fileID: 1208995648}
   spawnOnStart: 1
+  maxStartVehicles: 30
   maxRoadVehicles: 100
+  spawnInterval: 30
+  spawnCount: 5
   maxTrains: 20
   maxPedestrians: 100
 --- !u!4 &732118290
@@ -9195,7 +9198,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: e5e12933716a2449faad49dcce8797b1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 135b65dda92e2984d83c89d815af0072, type: 2}
 --- !u!1001 &1361939620
 PrefabInstance:
   m_ObjectHideFlags: 0
