@@ -10,7 +10,7 @@ namespace Kawaiiju
     {
         public GameObject pool;
 
-        public int carCount;
+        [SerializeField] private int carCount;
         public float globalHaltAverage;
         public string dataFilePath;
         public float dataInterval = 15;
@@ -42,12 +42,17 @@ namespace Kawaiiju
         private void FixedUpdate()
         {
             float totalAvg = 0;
-            carCount = pool.transform.childCount;
-            for (int i = 0; i < carCount; i++)
+            carCount = 0;
+            for (int i = 0; i < pool.transform.childCount; i++)
             {
-                float childAvg = pool.transform.GetChild(i).GetComponent<RecordHaltDuration>().getAvgHaltDuration();
-                //Debug.Log(childAvg);
-                totalAvg += childAvg;
+                Transform child = pool.transform.GetChild(i);
+                //car prefab is currently untagged
+                if (child.tag == "Untagged")
+                {
+                    carCount++;
+                    float childAvg = child.GetComponent<RecordHaltDuration>().getAvgHaltDuration();
+                    totalAvg += childAvg;
+                }
             }
 
             if (carCount > 0)
