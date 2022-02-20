@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  maxSpeed: 20
+  maxSpeed: 100
   front: {fileID: 4118226237734090}
 --- !u!114 &6290128139988485809
 MonoBehaviour:
