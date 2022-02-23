@@ -142,6 +142,7 @@ MonoBehaviour:
   - {fileID: 114194177147463400}
   - {fileID: 114341606604204642}
   - {fileID: 114011272036903566}
+  speedLimitInput: 40
   speedLimit: 40
   pedestrianSpawns:
   - {fileID: 4897688443969480}

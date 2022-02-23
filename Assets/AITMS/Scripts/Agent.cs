@@ -6,138 +6,140 @@ using Kawaiiju.Traffic;
 
 namespace Kawaiiju
 {
-	[RequireComponent(typeof(NavMeshAgent))]
-	public class Agent : MonoBehaviour 
-	{
-		private NavMeshAgent m_Agent;
-		public NavMeshAgent agent
-		{
-			get
-			{
-				if(!m_Agent)
-					m_Agent = GetComponent<NavMeshAgent>();
-				return m_Agent;
-			}
-		}
+    [RequireComponent(typeof(NavMeshAgent))]
+    public class Agent : MonoBehaviour
+    {
+        private NavMeshAgent m_Agent;
+        public NavMeshAgent agent
+        {
+            get
+            {
+                if (!m_Agent)
+                    m_Agent = GetComponent<NavMeshAgent>();
+                return m_Agent;
+            }
+        }
 
-		// -------------------------------------------------------------------
-		// Properties
+        // -------------------------------------------------------------------
+        // Properties
 
-		[Header("Agent")]
-		public TrafficType type = TrafficType.Pedestrian;
-		public int maxSpeed = 20;
+        [Header("Agent")]
+        public TrafficType type = TrafficType.Pedestrian;
+        public int maxSpeedIntput = 20;
+        [HideInInspector] public int maxSpeed;
 
-		// -------------------------------------------------------------------
-		// Initialization
+        // -------------------------------------------------------------------
+        // Initialization
 
-		public void Initialize()
-		{
-			agent.enabled = true;
-			speed = TrafficSystem.Instance.GetAgentSpeedFromKPH(maxSpeed);
-			agent.speed = speed;
-			m_Destination = TrafficSystem.Instance.GetPedestrianDestination();
-			if(m_Destination)
-				agent.destination = m_Destination.position;
-		}
+        public void Initialize()
+        {
+            agent.enabled = true;
+            speed = TrafficSystem.Instance.GetAgentSpeedFromKPH(maxSpeed);
+            agent.speed = speed;
+            m_Destination = TrafficSystem.Instance.GetPedestrianDestination();
+            if (m_Destination)
+                agent.destination = m_Destination.position;
+            maxSpeed = maxSpeedIntput * AITMSConfig.speedUpMagnitude;
+        }
 
-		// -------------------------------------------------------------------
-		// Update
+        // -------------------------------------------------------------------
+        // Update
 
-		float m_Speed;
-		public float speed
-		{
-			get { return m_Speed; }
-			set { m_Speed = value; }
-		}
-		Transform m_Destination;
+        float m_Speed;
+        public float speed
+        {
+            get { return m_Speed; }
+            set { m_Speed = value; }
+        }
+        Transform m_Destination;
 
-		public virtual void Update()
-		{
-			if(agent.isOnNavMesh)
-			{
-				if(CheckStop())
-					agent.velocity = Vector3.zero;
-				CheckWaitZone();
-				if(type == TrafficType.Pedestrian)
-					TestDestination();
-			}
-		}
+        public virtual void Update()
+        {
+            if (agent.isOnNavMesh)
+            {
+                if (CheckStop())
+                    agent.velocity = Vector3.zero;
+                CheckWaitZone();
+                if (type == TrafficType.Pedestrian)
+                    TestDestination();
+            }
+        }
 
-		private void TestDestination()
-		{
-			if(m_Destination)
-			{
-				float distanceToDestination = Vector3.Distance(transform.position, m_Destination.position);
-				if(distanceToDestination < 1f)
-				{
-					m_Destination = TrafficSystem.Instance.GetPedestrianDestination();
-					agent.destination = m_Destination.position;
-				}
-			}
-		}
+        private void TestDestination()
+        {
+            if (m_Destination)
+            {
+                float distanceToDestination = Vector3.Distance(transform.position, m_Destination.position);
+                if (distanceToDestination < 1f)
+                {
+                    m_Destination = TrafficSystem.Instance.GetPedestrianDestination();
+                    agent.destination = m_Destination.position;
+                }
+            }
+        }
 
-		// -------------------------------------------------------------------
-		// Collisions
+        // -------------------------------------------------------------------
+        // Collisions
 
-		public virtual void OnTriggerEnter(Collider col)
-		{
-			if(col.tag == "WaitZone")
-			{
-				WaitZone waitZone = col.GetComponent<WaitZone>();
-				if(waitZone.type == type)
-				{
-					if(type == TrafficType.Pedestrian)
-					{
-						if(CheckOppositeWAitZone(waitZone))
-							return;
-					}
-					m_CurrentWaitZone = waitZone;
-					if(!waitZone.canPass)
-						m_IsWaiting = true;
-				}
-			}
-		}
+        public virtual void OnTriggerEnter(Collider col)
+        {
+            if (col.tag == "WaitZone")
+            {
+                WaitZone waitZone = col.GetComponent<WaitZone>();
+                if (waitZone.type == type)
+                {
+                    if (type == TrafficType.Pedestrian)
+                    {
+                        if (CheckOppositeWAitZone(waitZone))
+                            return;
+                    }
+                    m_CurrentWaitZone = waitZone;
+                    if (!waitZone.canPass)
+                        m_IsWaiting = true;
+                }
+            }
+        }
 
-		private bool CheckOppositeWAitZone(WaitZone waitZone)
-		{
-			if(waitZone.opposite)
-			{
-				if(waitZone.opposite == m_CurrentWaitZone)
-					return true;
-			}
-			return false;
-		}
+        private bool CheckOppositeWAitZone(WaitZone waitZone)
+        {
+            if (waitZone.opposite)
+            {
+                if (waitZone.opposite == m_CurrentWaitZone)
+                    return true;
+            }
+            return false;
+        }
 
-		// -------------------------------------------------------------------
-		// WaitZone
+        // -------------------------------------------------------------------
+        // WaitZone
 
-		WaitZone m_CurrentWaitZone;
+        WaitZone m_CurrentWaitZone;
 
-		private bool m_IsWaiting;
-		public bool isWaiting { get { return m_IsWaiting; }}
+        private bool m_IsWaiting;
+        public bool isWaiting { get { return m_IsWaiting; } }
 
-		private void CheckWaitZone()
-		{
-			if(m_IsWaiting)
-			{
-				if(m_CurrentWaitZone)
-					m_IsWaiting = !m_CurrentWaitZone.canPass;
-			}
-		}
+        private void CheckWaitZone()
+        {
+            if (m_IsWaiting)
+            {
+                if (m_CurrentWaitZone)
+                    m_IsWaiting = !m_CurrentWaitZone.canPass;
+            }
+        }
 
-		public virtual bool CheckStop()
-		{
-			if(isWaiting)
-				return true;
-			return false;
-		}
+        public virtual bool CheckStop()
+        {
+            if (isWaiting)
+                return true;
+            return false;
+        }
 
-		// -------------------------------------------------------------------
-		// Debug
+        // -------------------------------------------------------------------
+        // Debug
 
-		public virtual void OnDrawGizmos()
-		{
-			
-		}
-	}
+        public virtual void OnDrawGizmos()
+        {
+
+        }
+    }
 }
