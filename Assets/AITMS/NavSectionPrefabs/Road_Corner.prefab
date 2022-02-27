@@ -593,6 +593,7 @@ MonoBehaviour:
   - {fileID: 114729497117003012}
   - {fileID: 114376189107879948}
   - {fileID: 114832059923068546}
+  speedLimitInput: 20
   speedLimit: 30
   pedestrianSpawns: []
 --- !u!1 &1806645126303558
@@ -823,7 +824,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 31b29cea830e0e24da72018652e5ed31, type: 2}
+      objectReference: {fileID: 2100000, guid: c413883b1f5da43f595f8475353613de, type: 2}
     - target: {fileID: 3189035907410560946, guid: de4e60cffe5391e4abdb20ee88a4ca21,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
