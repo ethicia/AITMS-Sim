@@ -230,13 +230,9 @@ MonoBehaviour:
     - {fileID: 114338876579697570}
     - {fileID: 114274015465546360}
     - {fileID: 114719493367214846}
-  timer:
-    timeRemaining: 0
-    timerIsRunning: 0
-    timeText: {fileID: 5060625913833348951}
   triggers: []
-  minimumPhaseInterval: 1
-  maximumPhaseInterval: 5
+  minimumPhaseInterval: 10
+  maximumPhaseInterval: 25
   averageTime: 1
   firstLaneCount: 0
   secondLaneCount: 0
@@ -248,6 +244,14 @@ MonoBehaviour:
   secondLaneBox: {fileID: 5213365257525778015}
   thirdLaneBox: {fileID: 3183345850917163176}
   fourthLaneBox: {fileID: 5797789532990774182}
+  textOnCube:
+  - {fileID: 5136052416795752856}
+  - {fileID: 89280583621833338}
+  - {fileID: 4652768617500363384}
+  - {fileID: 8338495796788298079}
+  - {fileID: 5060625913833348951}
+  timeRemaining: 10
+  timerIsRunning: 1
 --- !u!1 &1107694173655360
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,7 +4625,6 @@ GameObject:
   - component: {fileID: 112983091132043815}
   - component: {fileID: 8549776539513134587}
   - component: {fileID: 4652768617500363384}
-  - component: {fileID: 4437568251599713116}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4641,7 +4644,7 @@ RectTransform:
   m_LocalScale: {x: 0.10256362, y: 0.20714943, z: 1}
   m_Children: []
   m_Father: {fileID: 6220424722739599767}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4781,21 +4784,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &4437568251599713116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253364491340003102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3aa6c789565a9a43a1bce9c7de0e7e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 0
-  timerIsRunning: 0
-  timeText: {fileID: 4652768617500363384}
 --- !u!1 &638109355573214330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4807,7 +4795,6 @@ GameObject:
   - component: {fileID: 7786257681387547349}
   - component: {fileID: 5503847085241797273}
   - component: {fileID: 8338495796788298079}
-  - component: {fileID: 4087260785987401547}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -4827,7 +4814,7 @@ RectTransform:
   m_LocalScale: {x: 0.10256363, y: 0.20714943, z: 1}
   m_Children: []
   m_Father: {fileID: 6220424722739599767}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4967,21 +4954,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &4087260785987401547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638109355573214330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3aa6c789565a9a43a1bce9c7de0e7e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 0
-  timerIsRunning: 0
-  timeText: {fileID: 8338495796788298079}
 --- !u!1 &844790754837092256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5354,7 +5326,6 @@ GameObject:
   - component: {fileID: 2175963998228970712}
   - component: {fileID: 959538395776749854}
   - component: {fileID: 5060625913833348951}
-  - component: {fileID: 5030214996889241509}
   m_Layer: 0
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -5374,7 +5345,7 @@ RectTransform:
   m_LocalScale: {x: 0.10256364, y: 0.20714948, z: 1}
   m_Children: []
   m_Father: {fileID: 6220424722739599767}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5514,21 +5485,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &5030214996889241509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2661031310793122139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3aa6c789565a9a43a1bce9c7de0e7e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 0
-  timerIsRunning: 0
-  timeText: {fileID: 5060625913833348951}
 --- !u!1 &5254827898695900911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,14 +5621,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5635646899248107999}
   m_LocalRotation: {x: -0, y: -0.00000058114523, z: -0, w: -1}
-  m_LocalPosition: {x: -0.1, y: 1.4, z: -0.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
-  - {fileID: 2175963998228970712}
   - {fileID: 2146426604290775989}
   - {fileID: 9164139858978205898}
   - {fileID: 112983091132043815}
   - {fileID: 7786257681387547349}
+  - {fileID: 2175963998228970712}
   m_Father: {fileID: 4233808409161112}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5749,7 +5705,6 @@ GameObject:
   - component: {fileID: 9164139858978205898}
   - component: {fileID: 2948213069371028074}
   - component: {fileID: 89280583621833338}
-  - component: {fileID: 4164907350198212890}
   m_Layer: 0
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
@@ -5769,7 +5724,7 @@ RectTransform:
   m_LocalScale: {x: 0.10256363, y: 0.20714943, z: 1}
   m_Children: []
   m_Father: {fileID: 6220424722739599767}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5909,21 +5864,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &4164907350198212890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6946174227416279316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3aa6c789565a9a43a1bce9c7de0e7e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 0
-  timerIsRunning: 0
-  timeText: {fileID: 89280583621833338}
 --- !u!1 &8263664389531393911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,7 +5875,6 @@ GameObject:
   - component: {fileID: 2146426604290775989}
   - component: {fileID: 6083068245940854858}
   - component: {fileID: 5136052416795752856}
-  - component: {fileID: 410741591125184129}
   m_Layer: 0
   m_Name: Text (TMP) (4)
   m_TagString: Untagged
@@ -5955,7 +5894,7 @@ RectTransform:
   m_LocalScale: {x: 0.10256362, y: 0.20714943, z: 1}
   m_Children: []
   m_Father: {fileID: 6220424722739599767}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 360, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6095,21 +6034,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &410741591125184129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8263664389531393911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3aa6c789565a9a43a1bce9c7de0e7e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 0
-  timerIsRunning: 0
-  timeText: {fileID: 5136052416795752856}
 --- !u!1001 &3777940842946570962
 PrefabInstance:
   m_ObjectHideFlags: 0

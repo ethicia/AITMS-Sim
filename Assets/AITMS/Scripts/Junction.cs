@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Kawaiiju.Traffic
@@ -33,12 +34,16 @@ namespace Kawaiiju.Traffic
         public LaneVehicleCount secondLaneBox;
         public LaneVehicleCount thirdLaneBox;
         public LaneVehicleCount fourthLaneBox;
+        public TextMeshPro[] textOnCube;
+        public float timeRemaining;
+        public bool timerIsRunning = false;
         // -------------------------------------------------------------------
         // Initialization
 
         public override void Start()
         {
             phaseInterval = 5;
+            timeRemaining = phaseInterval;
             base.Start();
             if (phases.Length > 0)
                 phases[0].Enable();
@@ -59,14 +64,41 @@ namespace Kawaiiju.Traffic
                 if (m_PhaseTimer > phaseInterval)
                     ChangePhase();
             }
-            if(firstLaneBox != null)
-            firstLaneCount = firstLaneBox.vehiclewithin;
-            if(secondLaneBox != null)
-            secondLaneCount = secondLaneBox.vehiclewithin;
-            if(thirdLaneBox != null)
-            thirdLaneCount = thirdLaneBox.vehiclewithin;
-            if(fourthLaneBox != null)
-            fourthLaneCount = fourthLaneBox.vehiclewithin;
+            if (firstLaneBox != null)
+                firstLaneCount = firstLaneBox.vehiclewithin;
+            if (secondLaneBox != null)
+                secondLaneCount = secondLaneBox.vehiclewithin;
+            if (thirdLaneBox != null)
+                thirdLaneCount = thirdLaneBox.vehiclewithin;
+            if (fourthLaneBox != null)
+                fourthLaneCount = fourthLaneBox.vehiclewithin;
+
+            if (timerIsRunning)
+            {
+                if (timeRemaining > 0)
+                {
+                    timeRemaining -= Time.deltaTime;
+                    DisplayTime(timeRemaining);
+                }
+                else
+                {
+                    if (debug)
+                        Debug.Log("Timer Reset Indicator");
+                    timeRemaining = 0;
+                }
+            }
+        }
+
+        // -------------------------------------------------------------------
+        // Display Time
+
+        void DisplayTime(float timeToDisplay)
+        {
+            timeToDisplay += 1;
+            float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+            foreach (TextMeshPro x in textOnCube)
+                x.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
         // -------------------------------------------------------------------
@@ -123,8 +155,8 @@ namespace Kawaiiju.Traffic
             }
             else
             {
-                if(debug)
-                Debug.Log("T triggered");
+                if (debug)
+                    Debug.Log("T triggered");
                 switch (m_CurrentPhase)
                 {
                     case 0:
@@ -147,14 +179,17 @@ namespace Kawaiiju.Traffic
                 }
             }
             //boundary condition
-            phaseInterval = Math.Max(phaseInterval,minimumPhaseInterval);
-            phaseInterval = Math.Min(phaseInterval,maximumPhaseInterval);
+            phaseInterval = Math.Max(phaseInterval, minimumPhaseInterval);
+            phaseInterval = Math.Min(phaseInterval, maximumPhaseInterval);
+
+            timeRemaining = phaseInterval;
 
             phases[m_CurrentPhase].Enable();
 
-            if(debug){
+            if (debug)
+            {
                 Debug.Log("changing to phase " + m_CurrentPhase);
-                Debug.Log("phase interval "+ phaseInterval.ToString());
+                Debug.Log("phase interval " + phaseInterval.ToString());
                 //Debug.Log("vehicle count "+)
             }
         }

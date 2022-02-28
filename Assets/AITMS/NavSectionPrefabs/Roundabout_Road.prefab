@@ -8447,10 +8447,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5635646899248107999, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5672983874101567208, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220424722739599767, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6578592581980859821, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
