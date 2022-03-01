@@ -47,7 +47,7 @@ namespace Kawaiiju
             {
                 Transform child = pool.transform.GetChild(i);
                 //car prefab is currently untagged
-                if (child.tag == "Untagged")
+                if (child.tag == "Gib")
                 {
                     carCount++;
                     float childAvg = child.GetComponent<RecordHaltDuration>().getAvgHaltDuration();
