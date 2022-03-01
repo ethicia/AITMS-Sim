@@ -24,6 +24,7 @@ namespace Kawaiiju.Traffic
         public float minimumPhaseInterval = 3;
         public float maximumPhaseInterval = 10;
         public float averageTime = 1;
+        public float yellowTime = 5;
         public int firstLaneCount = 0;
         public int secondLaneCount = 0;
         public int thirdLaneCount = 0;
@@ -59,7 +60,14 @@ namespace Kawaiiju.Traffic
             if (type == PhaseType.Timed)
             {
                 m_PhaseTimer += Time.deltaTime;
+
+                /* 50% phase time is yellow time
                 if (!m_PhaseEnded && m_PhaseTimer > (phaseInterval * 0.5f))
+                    EndPhase();
+                */
+
+                //fixed yellow time
+                if (!m_PhaseEnded && m_PhaseTimer > (phaseInterval - yellowTime))
                     EndPhase();
                 if (m_PhaseTimer > phaseInterval)
                     ChangePhase();
