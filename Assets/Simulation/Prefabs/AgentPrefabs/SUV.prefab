@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1127629164266645984}
   m_Layer: 0
   m_Name: SUV
-  m_TagString: Untagged
+  m_TagString: Gib
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ NavMeshAgent:
   m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 0.6
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &3534145326849216696
@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6910523620598376400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.474}
+  m_LocalPosition: {x: 0, y: -0.119, z: 0.474}
   m_LocalScale: {x: 0.23333332, y: 0.24999996, z: 0.7142857}
   m_Children: []
   m_Father: {fileID: 3316180331369389556}
