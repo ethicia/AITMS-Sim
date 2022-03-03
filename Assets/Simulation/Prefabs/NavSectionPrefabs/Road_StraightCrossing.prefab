@@ -1688,6 +1688,7 @@ MonoBehaviour:
   minimumPhaseInterval: 3
   maximumPhaseInterval: 10
   averageTime: 1
+  yellowTime: 5
   firstLaneCount: 0
   secondLaneCount: 0
   thirdLaneCount: 0
@@ -1698,6 +1699,9 @@ MonoBehaviour:
   secondLaneBox: {fileID: 0}
   thirdLaneBox: {fileID: 0}
   fourthLaneBox: {fileID: 0}
+  textOnCube: []
+  timeRemaining: 0
+  timerIsRunning: 0
 --- !u!1 &1976563753876602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,5 +1877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3aa6c789565a9a43a1bce9c7de0e7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 10
-  countdownText: {fileID: 0}
+  timeRemaining: 10
+  timerIsRunning: 0
+  timeText: {fileID: 0}
