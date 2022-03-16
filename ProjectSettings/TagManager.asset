@@ -20,6 +20,8 @@ TagManager:
   - ThirdLane
   - T
   - RoundaboutConnection
+  - RedLight
+  - GreenLight
   layers:
   - Default
   - TransparentFX
