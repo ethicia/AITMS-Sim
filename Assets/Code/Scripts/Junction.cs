@@ -21,20 +21,11 @@ namespace Kawaiiju.Traffic
         public Phase[] phases;
         public JunctionTrigger[] triggers;
         private float phaseInterval = 5;
-        public float minimumPhaseInterval = 3;
-        public float maximumPhaseInterval = 10;
-        public float averageTime = 1;
         public float yellowTime = 5;
-        public int firstLaneCount = 0;
-        public int secondLaneCount = 0;
-        public int thirdLaneCount = 0;
-        public int fourthLaneCount = 0;
+        public JunctionObservables junctionObservables;
         public bool debug = false;
         [HideInInspector] public GameObject another;
-        public LaneVehicleCount firstLaneBox;
-        public LaneVehicleCount secondLaneBox;
-        public LaneVehicleCount thirdLaneBox;
-        public LaneVehicleCount fourthLaneBox;
+        public LaneVehicleCount[] laneBox;
         public TextMeshPro[] textOnCube;
         public float timeRemaining;
         public bool timerIsRunning = false;
@@ -43,8 +34,8 @@ namespace Kawaiiju.Traffic
 
         public override void Start()
         {
-            phaseInterval = 5;
             timeRemaining = phaseInterval;
+
             base.Start();
             if (phases.Length > 0)
                 phases[0].Enable();
@@ -61,26 +52,20 @@ namespace Kawaiiju.Traffic
             {
                 m_PhaseTimer += Time.deltaTime;
 
-                /* 50% phase time is yellow time
-                if (!m_PhaseEnded && m_PhaseTimer > (phaseInterval * 0.5f))
-                    EndPhase();
-                */
-
                 //fixed yellow time
                 if (!m_PhaseEnded && m_PhaseTimer > (phaseInterval - yellowTime))
                     EndPhase();
                 if (m_PhaseTimer > phaseInterval)
                     ChangePhase();
             }
-            if (firstLaneBox != null)
-                firstLaneCount = firstLaneBox.vehiclewithin;
-            if (secondLaneBox != null)
-                secondLaneCount = secondLaneBox.vehiclewithin;
-            if (thirdLaneBox != null)
-                thirdLaneCount = thirdLaneBox.vehiclewithin;
-            if (fourthLaneBox != null)
-                fourthLaneCount = fourthLaneBox.vehiclewithin;
 
+            //updating vehicle counts
+            for (int i = 0; i < laneBox.Length; i++)
+            {
+                junctionObservables.phaseCounts[i] = laneBox[i].vehiclewithin;
+            }
+
+            //timer display
             if (timerIsRunning)
             {
                 if (timeRemaining > 0)
@@ -130,65 +115,12 @@ namespace Kawaiiju.Traffic
                 m_CurrentPhase++;
             else
                 m_CurrentPhase = 0;
-            //another = GameObject.FindGameObjectWithTag("Cross");
-            //calculating phase interval
-            if (gameObject.tag == "Cross")
+
+            //assigning phase intervals
+            for (int i = 0; i < laneBox.Length; i++)
             {
-                switch (m_CurrentPhase)
-                {
-                    case 0:
-                        phaseInterval = (firstLaneCount * averageTime) / 5;
-                        if (debug)
-                            Debug.Log("count " + firstLaneCount);
-                        break;
-
-                    case 1:
-                        phaseInterval = (secondLaneCount * averageTime) / 5;
-                        if (debug)
-                            Debug.Log("count " + secondLaneCount);
-                        break;
-
-                    case 3:
-                        phaseInterval = (thirdLaneCount * averageTime) / 5;
-                        if (debug)
-                            Debug.Log("count " + thirdLaneCount);
-                        break;
-
-                    case 2:
-                        phaseInterval = (fourthLaneCount * averageTime) / 5;
-                        if (debug)
-                            Debug.Log("count " + fourthLaneCount);
-                        break;
-                }
+                phaseInterval = junctionObservables.phaseTimings[i];
             }
-            else
-            {
-                if (debug)
-                    Debug.Log("T triggered");
-                switch (m_CurrentPhase)
-                {
-                    case 0:
-                        phaseInterval = (firstLaneCount * averageTime) / 4;
-                        if (debug)
-                            Debug.Log("count " + firstLaneCount);
-                        break;
-
-                    case 1:
-                        phaseInterval = (secondLaneCount * averageTime) / 4;
-                        if (debug)
-                            Debug.Log("count " + secondLaneCount);
-                        break;
-
-                    case 3:
-                        phaseInterval = (thirdLaneCount * averageTime) / 4;
-                        if (debug)
-                            Debug.Log("count " + thirdLaneCount);
-                        break;
-                }
-            }
-            //boundary condition
-            phaseInterval = Math.Max(phaseInterval, minimumPhaseInterval);
-            phaseInterval = Math.Min(phaseInterval, maximumPhaseInterval);
 
             timeRemaining = phaseInterval;
 
