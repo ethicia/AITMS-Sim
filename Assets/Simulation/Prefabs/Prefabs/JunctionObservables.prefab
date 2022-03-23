@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phaseTimings: 0f0000000f0000000f0000000f000000
-  phaseCounts: 00000000000000000000000000000000
+  phaseCounts: 00000000000000000100000002000000
   minimumPhaseInterval: 5
   maximumPhaseInterval: 25

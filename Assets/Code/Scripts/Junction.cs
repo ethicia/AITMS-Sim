@@ -22,7 +22,7 @@ namespace Kawaiiju.Traffic
         public JunctionTrigger[] triggers;
         private float phaseInterval = 5;
         public float yellowTime = 5;
-        public JunctionObservables junctionObservables;
+        [HideInInspector] public JunctionObservables junctionObservables;
         public bool debug = false;
         [HideInInspector] public GameObject another;
         public LaneVehicleCount[] laneBox;
@@ -35,6 +35,7 @@ namespace Kawaiiju.Traffic
         public override void Start()
         {
             timeRemaining = phaseInterval;
+            junctionObservables = gameObject.GetComponent<JunctionObservables>();
 
             base.Start();
             if (phases.Length > 0)

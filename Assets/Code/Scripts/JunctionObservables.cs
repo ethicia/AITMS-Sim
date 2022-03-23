@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Kawaiiju.Traffic
@@ -6,12 +7,22 @@ namespace Kawaiiju.Traffic
     {
         public int[] phaseTimings;
         public int[] phaseCounts;
-        public float minimumPhaseInterval = 5;
-        public float maximumPhaseInterval = 25;
+        public int minimumPhaseInterval = 5;
+        public int maximumPhaseInterval = 25;
         JunctionObservables()
         {
-            phaseTimings = new int[4] { 15, 15, 15, 15 };
+            phaseTimings = new int[4] { 13, 13, 13, 13 };
             phaseCounts = new int[4] { 0, 0, 0, 0 };
+        }
+
+        public void setPhaseInterval(int phase, int phaseInterval)
+        {
+            //boundary conditions
+            phaseInterval = Math.Max(phaseInterval, minimumPhaseInterval);
+            phaseInterval = Math.Min(phaseInterval, maximumPhaseInterval);
+
+            phaseTimings[phase] = phaseInterval;
+
         }
 
     }

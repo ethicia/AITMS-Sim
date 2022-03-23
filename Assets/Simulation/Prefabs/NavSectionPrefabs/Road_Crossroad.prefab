@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4233808409161112}
   - component: {fileID: 114784332008515400}
+  - component: {fileID: 8501769033038449810}
   m_Layer: 0
   m_Name: Road_Crossroad
   m_TagString: Cross
@@ -233,8 +234,6 @@ MonoBehaviour:
     - {fileID: 4853549119635557811}
   triggers: []
   yellowTime: 5
-  junctionObservables: {fileID: 224059333914971949, guid: 98e8f70faf5f192488492c41e826d106,
-    type: 3}
   debug: 0
   another: {fileID: 0}
   laneBox:
@@ -250,6 +249,22 @@ MonoBehaviour:
   - {fileID: 5060625913833348951}
   timeRemaining: 10
   timerIsRunning: 1
+--- !u!114 &8501769033038449810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044478496400794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4ad4139c45bf6e4bd5720cdeda8b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phaseTimings: 0f0000000f0000000f0000000f000000
+  phaseCounts: 00000000000000000000000000000000
+  minimumPhaseInterval: 5
+  maximumPhaseInterval: 25
 --- !u!1 &1107694173655360
 GameObject:
   m_ObjectHideFlags: 0
