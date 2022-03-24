@@ -59,8 +59,8 @@ namespace Kawaiiju.Traffic
                     SpawnRoadVehicle(true);
                 //for(int i = 0; i < maxTrains; i++)
                 //	SpawnTrain(true);
-                //for(int i = 0; i < maxPedestrians; i++)
-                //	SpawnPedestrian(true);
+                for (int i = 0; i < maxPedestrians; i++)
+                    SpawnPedestrian(true);
             }
         }
 

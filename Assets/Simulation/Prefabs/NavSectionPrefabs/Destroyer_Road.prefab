@@ -9,11 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1138728264224080, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_Name
-      value: Destroyer Road
+      value: Destroyer_Road
       objectReference: {fileID: 0}
     - target: {fileID: 1443106679115574, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_TagString
       value: Detroyer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564073591598394, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564073591598394, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564073591598394, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4737159651474342, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_RootOrder
@@ -58,6 +70,18 @@ PrefabInstance:
     - target: {fileID: 4737159651474342, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784228834002848, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784228834002848, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784228834002848, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fae821b444904e988358333371dbee7, type: 3}
