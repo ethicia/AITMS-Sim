@@ -84,7 +84,7 @@ namespace Kawaiiju.Traffic
                     if (pool.childCount < maxRoadVehicles)
                         SpawnRoadVehicle(true);
                 spawnTimer = 0; // reset timer
-                Debug.Log("Spawned vehicles");
+                //Debug.Log("Spawned vehicles");
             }
 
         }

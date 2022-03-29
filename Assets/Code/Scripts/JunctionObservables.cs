@@ -17,6 +17,7 @@ namespace Kawaiiju.Traffic
 
         public void setPhaseInterval(int phase, int phaseInterval)
         {
+            Debug.Log("set phase:" + phase.ToString() + " interval:" + phaseInterval.ToString());
             //boundary conditions
             phaseInterval = Math.Max(phaseInterval, minimumPhaseInterval);
             phaseInterval = Math.Min(phaseInterval, maximumPhaseInterval);
