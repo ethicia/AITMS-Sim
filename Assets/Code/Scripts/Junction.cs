@@ -29,6 +29,7 @@ namespace Kawaiiju.Traffic
         public TextMeshPro[] textOnCube;
         public float timeRemaining;
         public bool timerIsRunning = false;
+        private JunctionRLAgent RLAgent;
         // -------------------------------------------------------------------
         // Initialization
 
@@ -36,6 +37,7 @@ namespace Kawaiiju.Traffic
         {
             timeRemaining = phaseInterval;
             junctionObservables = gameObject.GetComponent<JunctionObservables>();
+            RLAgent = gameObject.GetComponent<JunctionRLAgent>();
 
             base.Start();
             if (phases.Length > 0)
@@ -47,6 +49,9 @@ namespace Kawaiiju.Traffic
         // -------------------------------------------------------------------
         // Update
 
+        private bool decisionTaken = false;
+        private int prevTotalCount = 0;
+        private int phasesPerEpisode = 4, phaseCount = 0;
         private void Update()
         {
             if (type == PhaseType.Timed)
@@ -55,9 +60,39 @@ namespace Kawaiiju.Traffic
 
                 //fixed yellow time
                 if (!m_PhaseEnded && m_PhaseTimer > (phaseInterval - yellowTime))
+                {
                     EndPhase();
+                    if (RLAgent != null && !decisionTaken)
+                    {
+                        RLAgent.RequestDecision();
+                        decisionTaken = true;
+                    }
+                }
                 if (m_PhaseTimer > phaseInterval)
+                {
+                    //adding rewards
+                    int totalCount = 0;
+                    for (int i = 0; i < laneBox.Length; i++)
+                        totalCount += laneBox[i].vehiclewithin;
+
+                    if (RLAgent != null)
+                    {
+                        int rewards = prevTotalCount - totalCount;
+                        RLAgent.SetReward(rewards);
+                        //Debug.Log("rewards: " + rewards.ToString());
+                    }
+                    prevTotalCount = totalCount;
+
+                    decisionTaken = false;
+                    phaseCount++;
+
+                    if (RLAgent != null && phaseCount >= phasesPerEpisode)
+                    {
+                        RLAgent.EndEpisode();
+                        phaseCount = 0;
+                    }
                     ChangePhase();
+                }
             }
 
             //updating vehicle counts

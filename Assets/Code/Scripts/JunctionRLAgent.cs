@@ -15,6 +15,11 @@ public class JunctionRLAgent : Agent
         junctionObservables = gameObject.GetComponent<Kawaiiju.Traffic.JunctionObservables>();
     }
 
+    public override void OnEpisodeBegin()
+    {
+        Debug.Log("New Episode");
+    }
+
     public override void CollectObservations(VectorSensor sensor)
     {
         //current phase intervals
@@ -33,10 +38,11 @@ public class JunctionRLAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        junctionObservables.setPhaseInterval(0, Mathf.RoundToInt(actionBuffers.ContinuousActions[0]));
-        junctionObservables.setPhaseInterval(1, Mathf.RoundToInt(actionBuffers.ContinuousActions[1]));
-        junctionObservables.setPhaseInterval(2, Mathf.RoundToInt(actionBuffers.ContinuousActions[2]));
-        junctionObservables.setPhaseInterval(3, Mathf.RoundToInt(actionBuffers.ContinuousActions[3]));
+        for (int i = 0; i < 4; i++)
+        {
+            float scaledInterval = ScaleAction(Mathf.Clamp(actionBuffers.ContinuousActions[i], -1f, 1f), 5f, 35f);
+            junctionObservables.setPhaseInterval(i, Mathf.RoundToInt(scaledInterval));
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
