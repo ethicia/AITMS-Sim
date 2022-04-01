@@ -555,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 05e15138176184943a892e64e2c9cb65,
         type: 3}
       propertyPath: m_Name
-      value: road_slantCurve_strip
+      value: SlantCurveRoad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05e15138176184943a892e64e2c9cb65, type: 3}
@@ -835,7 +835,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 951a0a658fba05d42af75fdc1b0fabc2,
         type: 3}
       propertyPath: m_Name
-      value: road_slantCurveBarrier
+      value: SlantBarrier
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 951a0a658fba05d42af75fdc1b0fabc2, type: 3}

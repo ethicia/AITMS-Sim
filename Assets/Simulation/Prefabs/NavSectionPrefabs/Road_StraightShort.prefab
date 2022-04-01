@@ -749,7 +749,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 572444485d83be74d8b08d7878710eeb,
         type: 3}
       propertyPath: m_Name
-      value: road_straight
+      value: StraightRoad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 572444485d83be74d8b08d7878710eeb, type: 3}
