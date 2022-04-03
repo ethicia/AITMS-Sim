@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.0.1 commit date:2022-01-25, commit time:17:19, hash:dc2d18018171</authoring_tool>
+    </contributor>
+    <created>2022-03-26T13:05:38</created>
+    <modified>2022-03-26T13:05:38</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="pavement-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.756863 0.756863 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="pavement-material" name="pavement">
+      <instance_effect url="#pavement-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID5-mesh" name="ID5">
+      <mesh>
+        <source id="ID5-mesh-positions">
+          <float_array id="ID5-mesh-positions-array" count="72">0.47 0.07999998 0.5 0.5 0.07999998 0.5 0.47 0.07999998 -0.5 0.5 0.07999998 -0.5 0.45 0 0.5 0.45 0 -0.5 0.5 0 0.5 0.5 0 -0.5 0.45 0 -0.5 0.45 0 0.5 0.47 0.07999998 -0.5 0.47 0.07999998 0.5 0.5 0 -0.5 0.45 0 -0.5 0.5 0.07999998 -0.5 0.47 0.07999998 -0.5 0.5 0 -0.5 0.5 0.07999998 -0.5 0.5 0 0.5 0.5 0.07999998 0.5 0.45 0 0.5 0.5 0 0.5 0.47 0.07999998 0.5 0.5 0.07999998 0.5</float_array>
+          <technique_common>
+            <accessor source="#ID5-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID5-mesh-normals">
+          <float_array id="ID5-mesh-normals-array" count="21">0 1 0 0 -1 0 -0.9701426 0.2425354 0 -0.9701424 0.2425361 0 0 0 -1 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#ID5-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID5-mesh-map-0">
+          <float_array id="ID5-mesh-map-0-array" count="72">18.50394 19.68504 19.68504 19.68504 18.50394 -19.68504 19.68504 -19.68504 18.50394 -19.68504 19.68504 19.68504 -17.71654 19.68504 -17.71654 -19.68504 -19.68504 19.68504 -19.68504 -19.68504 -19.68504 19.68504 -17.71654 -19.68504 19.68504 4.296891 -19.68504 4.296891 19.68504 7.543431 -19.68504 7.543431 19.68504 7.543431 -19.68504 4.296891 19.68504 0 17.71654 0 19.68504 3.149606 18.50394 3.149606 19.68504 3.149606 17.71654 0 -19.68504 0 -19.68504 3.149606 19.68504 0 19.68504 3.149606 19.68504 0 -19.68504 3.149606 -17.71654 0 -19.68504 0 -18.50394 3.149606 -19.68504 3.149606 -18.50394 3.149606 -19.68504 0</float_array>
+          <technique_common>
+            <accessor source="#ID5-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID5-mesh-vertices">
+          <input semantic="POSITION" source="#ID5-mesh-positions"/>
+        </vertices>
+        <triangles material="pavement-material" count="12">
+          <input semantic="VERTEX" source="#ID5-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID5-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID5-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 3 0 3 2 0 4 1 0 5 4 1 6 5 1 7 6 1 8 7 1 9 6 1 10 5 1 11 8 2 12 9 2 13 10 2 14 11 3 15 10 3 16 9 3 17 12 4 18 13 4 19 14 4 20 15 4 21 14 4 22 13 4 23 16 5 24 17 5 25 18 5 26 19 5 27 18 5 28 17 5 29 20 6 30 21 6 31 22 6 32 23 6 33 22 6 34 21 6 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="road_straightBarrier" name="road_straightBarrier" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -1.62921e-7 -1 0 0 1 -1.62921e-7 0 0 0 0 1</matrix>
+        <instance_geometry url="#ID5-mesh" name="road_straightBarrier">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pavement-material" target="#pavement-material">
+                <bind_vertex_input semantic="ID10" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
