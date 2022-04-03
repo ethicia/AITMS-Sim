@@ -31,10 +31,6 @@ Transform:
   - {fileID: 4979431006474453585}
   - {fileID: 1237883351710255025}
   - {fileID: 6910199969798340489}
-  - {fileID: 7076773104702867842}
-  - {fileID: 3166500818701339589}
-  - {fileID: 4416400113278779954}
-  - {fileID: 466018806490057659}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,7 +167,7 @@ GameObject:
   - component: {fileID: 6470433114045110970}
   - component: {fileID: 7833313025936915890}
   m_Layer: 11
-  m_Name: Arch (1)
+  m_Name: Vehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,12 +180,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3763812099632264928}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -1, y: 0.04, z: 1.439}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -1.4389557, y: 0.04, z: -3.25}
   m_LocalScale: {x: -1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1803199937468447134}
-  m_RootOrder: 6
+  m_Father: {fileID: 1237883351710255025}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4816295281078589254
 MonoBehaviour:
@@ -1039,7 +1035,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1143,7 +1139,7 @@ GameObject:
   - component: {fileID: 8687794053881669341}
   - component: {fileID: 4507408793342416183}
   m_Layer: 11
-  m_Name: New Game Object (1)
+  m_Name: Vehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1156,12 +1152,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6231487514942423249}
-  m_LocalRotation: {x: 0.0000000842937, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.99694955, y: 0.03999979, z: 0.6421892}
+  m_LocalRotation: {x: 0.00000005960465, y: -0.7071068, z: 0.00000005960465, w: 0.7071068}
+  m_LocalPosition: {x: -0.6078553, y: 0.04, z: -3.24695}
   m_LocalScale: {x: 1, y: 1, z: -1}
   m_Children: []
-  m_Father: {fileID: 1803199937468447134}
-  m_RootOrder: 4
+  m_Father: {fileID: 1237883351710255025}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4382874802681625706
 MonoBehaviour:
@@ -1318,7 +1314,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1422,7 +1418,7 @@ GameObject:
   - component: {fileID: 7271344733023984974}
   - component: {fileID: 2179443463499440413}
   m_Layer: 11
-  m_Name: Arch
+  m_Name: Vehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,12 +1431,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7003262334149214153}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -1, y: 0.04, z: -1.405}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.4050444, y: 0.04, z: -3.2499995}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1803199937468447134}
-  m_RootOrder: 5
+  m_Father: {fileID: 1237883351710255025}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7242043857581812650
 MonoBehaviour:
@@ -2290,7 +2286,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2406,7 +2402,11 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 2.2499995, y: 0, z: 0.000043928623}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7076773104702867842}
+  - {fileID: 3166500818701339589}
+  - {fileID: 4416400113278779954}
+  - {fileID: 466018806490057659}
   m_Father: {fileID: 1803199937468447134}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2425,7 +2425,7 @@ GameObject:
   - component: {fileID: 3329890713503098678}
   - component: {fileID: 485848807629481223}
   m_Layer: 11
-  m_Name: New Game Object
+  m_Name: Vehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2438,12 +2438,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849033578015111934}
-  m_LocalRotation: {x: 0.0000000842937, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.99694955, y: 0.04, z: -0.6078108}
+  m_LocalRotation: {x: 0.00000005960465, y: -0.7071068, z: 0.00000005960465, w: 0.7071068}
+  m_LocalPosition: {x: 0.60785526, y: 0.04, z: -3.2469497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1803199937468447134}
-  m_RootOrder: 3
+  m_Father: {fileID: 1237883351710255025}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8305402645834043631
 MonoBehaviour:
@@ -2600,7 +2600,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
