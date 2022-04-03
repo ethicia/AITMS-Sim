@@ -31,11 +31,12 @@ namespace Kawaiiju.Traffic
         public GameObject trainCarriagePrefab; // TODO - Get from object pool
         public Transform pool;  // TODO - Get from object pool
         public bool spawnOnStart = true;
+        public bool trainsEnabled = false;
         public int maxStartVehicles = 30;
         public int maxRoadVehicles = 150;
         public float spawnInterval = 30;
         public int spawnCount = 5;
-        public int maxTrains = 0;
+        public int maxTrains = 3;
         public int maxPedestrians = 0;
 
         // -------------------------------------------------------------------
@@ -49,16 +50,22 @@ namespace Kawaiiju.Traffic
             Road[] roadsFound = FindObjectsOfType<Road>();
             foreach (Road r in roadsFound)
                 m_Roads.Add(r);
-            //Track[] tracksFound = FindObjectsOfType<Track>();
-            //foreach(Track t in tracksFound)
-            //	m_Tracks.Add(t);
+            if (trainsEnabled)
+            {
+                Track[] tracksFound = FindObjectsOfType<Track>();
+                foreach (Track t in tracksFound)
+                    m_Tracks.Add(t);
+            }
 
             if (spawnOnStart)
             {
                 for (int i = 0; i < maxStartVehicles; i++)
                     SpawnRoadVehicle(true);
-                //for(int i = 0; i < maxTrains; i++)
-                //	SpawnTrain(true);
+                
+                if (trainsEnabled)
+                    for (int i = 0; i < maxTrains; i++)
+                        SpawnTrain(true);
+                
                 for (int i = 0; i < maxPedestrians; i++)
                     SpawnPedestrian(true);
             }
@@ -75,8 +82,9 @@ namespace Kawaiiju.Traffic
                 SpawnPedestrian(true);
             if (Input.GetKeyUp(KeyCode.Return))
                 SpawnRoadVehicle(true);
-            //if(Input.GetKeyUp(KeyCode.RightShift))
-            //	SpawnTrain(true);
+            if(trainsEnabled)
+                if (Input.GetKeyUp(KeyCode.RightShift))
+                    SpawnTrain(true);
 
             if (spawnTimer >= spawnInterval)
             {
@@ -93,7 +101,7 @@ namespace Kawaiiju.Traffic
         // Spawn
 
         private int m_RoadVehicleSpawnAttempts;
-        //private int m_TrainSpawnAttempts;
+        private int m_TrainSpawnAttempts;
         private int m_PedestrianSpawnAttempts;
 
         private void SpawnRoadVehicle(bool reset)
@@ -114,23 +122,23 @@ namespace Kawaiiju.Traffic
             newVehicle.Initialize(road, spawn.destination);
         }
 
-        //private void SpawnTrain(bool reset)
-        //{
-        //	if(reset)
-        //		m_TrainSpawnAttempts = 0;
-        //	int index = UnityEngine.Random.Range(0, m_Tracks.Count);
-        //	Track track = m_Tracks[index];
-        //	VehicleSpawn spawn;
-        //	if(!track.TryGetVehicleSpawn(out spawn))
-        //	{
-        //		m_TrainSpawnAttempts++;
-        //		if(m_TrainSpawnAttempts < m_Tracks.Count)
-        //			SpawnRoadVehicle(false);
-        //		return;
-        //	}
-        //	Train newTrain = Instantiate(trainPrefab, spawn.spawn.position, spawn.spawn.rotation, pool.transform).GetComponent<Train>();
-        //	newTrain.Initialize(track, spawn.destination);
-        //}
+        private void SpawnTrain(bool reset)
+        {
+            if (reset)
+                m_TrainSpawnAttempts = 0;
+            int index = UnityEngine.Random.Range(0, m_Tracks.Count);
+            Track track = m_Tracks[index];
+            VehicleSpawn spawn;
+            if (!track.TryGetVehicleSpawn(out spawn))
+            {
+                m_TrainSpawnAttempts++;
+                if (m_TrainSpawnAttempts < m_Tracks.Count)
+                    SpawnRoadVehicle(false);
+                return;
+            }
+            Train newTrain = Instantiate(trainPrefab, spawn.spawn.position, spawn.spawn.rotation, pool.transform).GetComponent<Train>();
+            newTrain.Initialize(track, spawn.destination);
+        }
 
         private void SpawnPedestrian(bool reset)
         {
