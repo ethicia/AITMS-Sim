@@ -9,11 +9,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1138728264224080, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_Name
-      value: Destroyer_Road
+      value: SingleLane_DestroyerLTS
       objectReference: {fileID: 0}
     - target: {fileID: 1443106679115574, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_TagString
       value: Detroyer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043369594653144, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209626413932656, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402974070539786, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557408600534974, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4564073591598394, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_LocalScale.x
@@ -26,6 +42,14 @@ PrefabInstance:
     - target: {fileID: 4564073591598394, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612187187187156, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728545983938000, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4737159651474342, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_RootOrder
