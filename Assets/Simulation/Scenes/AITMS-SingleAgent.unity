@@ -4984,6 +4984,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 45d684badf848cbe99351a71015c7f17,
+        type: 3}
+    - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
       propertyPath: m_BehaviorName
       value: JunctionAI
       objectReference: {fileID: 0}
@@ -4996,6 +5002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maximumPhaseInterval
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501769033038449810, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: minimumPhaseInterval
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549514ad6753145a09f1ead1e306524c, type: 3}

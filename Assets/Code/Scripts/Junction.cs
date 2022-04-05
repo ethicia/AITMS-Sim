@@ -31,6 +31,8 @@ namespace Kawaiiju.Traffic
         public bool timerIsRunning = false;
         private JunctionRLAgent RLAgent;
         private Collector collector;
+        private float minCycle;
+        private float maxCycle;
         // -------------------------------------------------------------------
         // Initialization
 
@@ -40,6 +42,9 @@ namespace Kawaiiju.Traffic
             junctionObservables = gameObject.GetComponent<JunctionObservables>();
             RLAgent = gameObject.GetComponent<JunctionRLAgent>();
             collector = gameObject.GetComponentInChildren<Collector>();
+
+            minCycle = junctionObservables.minimumPhaseInterval * laneBox.Length;
+            maxCycle = junctionObservables.maximumPhaseInterval * laneBox.Length;
 
             base.Start();
             if (phases.Length > 0)
@@ -52,6 +57,7 @@ namespace Kawaiiju.Traffic
         // Update
 
         private bool decisionTaken = false;
+        float reward;
 
         private void Update()
         {
@@ -64,7 +70,12 @@ namespace Kawaiiju.Traffic
                 {
                     if (RLAgent != null)
                     {
-                        RLAgent.AddReward(collector.getAvgHaltTime());
+                        //scaling reward
+                        if (minCycle != maxCycle)
+                            reward = (collector.getAvgHaltTime() - minCycle) / (maxCycle - minCycle);
+                        else
+                            reward = 0f;
+                        RLAgent.AddReward(reward);
 
                         if (m_CurrentPhase == 0)
                         {
