@@ -409,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_7
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114122727322085200, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -3025,7 +3025,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_5
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114122727322085200, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -3735,7 +3735,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_2
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114911117245880760, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -4975,7 +4975,7 @@ PrefabInstance:
     - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_4
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549514ad6753145a09f1ead1e306524c, type: 3}
@@ -5768,7 +5768,7 @@ PrefabInstance:
     - target: {fileID: 6206482543846524339, guid: f011c0e35134ca6469c48ad5c11ff858,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_3
+      value: JunctionAI
       objectReference: {fileID: 0}
     - target: {fileID: 7102738374534755903, guid: f011c0e35134ca6469c48ad5c11ff858,
         type: 3}
@@ -5883,7 +5883,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-55892
+  m_Name: pb_Mesh-222694
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7294,7 +7294,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_6
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114122727322085200, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -10335,7 +10335,7 @@ PrefabInstance:
     - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_1
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549514ad6753145a09f1ead1e306524c, type: 3}

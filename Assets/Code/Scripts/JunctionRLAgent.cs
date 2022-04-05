@@ -8,7 +8,6 @@ using Unity.MLAgents.Actuators;
 public class JunctionRLAgent : Agent
 {
     private Kawaiiju.Traffic.JunctionObservables junctionObservables;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +16,15 @@ public class JunctionRLAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        Debug.Log("New Episode");
+        SetReward(0);
+        Debug.Log("New Episode " + gameObject.GetInstanceID().ToString());
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        //current phase
+        sensor.AddObservation(junctionObservables.currentPhase);
+
         //current phase intervals
         sensor.AddObservation(junctionObservables.phaseTimings[0]);
         sensor.AddObservation(junctionObservables.phaseTimings[1]);
@@ -40,9 +43,11 @@ public class JunctionRLAgent : Agent
     {
         for (int i = 0; i < 4; i++)
         {
-            float scaledInterval = ScaleAction(Mathf.Clamp(actionBuffers.ContinuousActions[i], -1f, 1f), 5f, 35f);
+            float scaledInterval = ScaleAction(Mathf.Clamp(actionBuffers.ContinuousActions[i], -1f, 1f),
+            junctionObservables.minimumPhaseInterval, junctionObservables.maximumPhaseInterval);
             junctionObservables.setPhaseInterval(i, Mathf.RoundToInt(scaledInterval));
         }
+
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

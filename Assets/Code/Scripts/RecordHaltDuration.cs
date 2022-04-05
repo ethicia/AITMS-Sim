@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Kawaiiju.Traffic;
 using System;
 
-namespace Kawaiiju
+namespace Kawaiiju.Traffic
 {
 
     public enum Status { Moving, Halt };
@@ -19,6 +18,7 @@ namespace Kawaiiju
         [HideInInspector] public float totalHaltDuration;
         [HideInInspector] public int haltCount;
         [HideInInspector] public float avgHaltDuration;
+        public float haltPunishment;
         private long stopTime;
         private float haltDuration;
 
@@ -32,6 +32,7 @@ namespace Kawaiiju
             haltCount = 0;
             avgHaltDuration = 0;
             haltDuration = 0;
+            haltPunishment = 0;
         }
 
         // Update is called once per frame
@@ -60,22 +61,26 @@ namespace Kawaiiju
                         {
                             status = Status.Moving;
 
+                            //add halt duration to total halt duration
                             if (haltDuration >= minHaltDuration)
                             {
+                                haltPunishment += haltDuration;
                                 totalHaltDuration += haltDuration;
                                 haltCount++;
                                 avgHaltDuration = totalHaltDuration / haltCount;
                                 haltDuration = 0;
-                                //Debug.Log("Halt Duration: " + haltDuration);
-                                //Debug.Log("Total Duration: " + totalHaltDuration);
-                                //Debug.Log("Halt Count: " + haltCount);
-                                //Debug.Log("Avg Duration: " + avgHaltDuration);
-
                             }
                         }
                         break;
                     }
             }
+        }
+
+        public float getHaltPunishment()
+        {
+            float temp = -1 * haltPunishment;
+            haltPunishment = 0;
+            return temp;
         }
 
         public float getAvgHaltDuration()

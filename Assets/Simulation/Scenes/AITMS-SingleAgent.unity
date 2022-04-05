@@ -409,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_7
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114122727322085200, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -1921,7 +1921,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58906
+  m_Name: pb_Mesh-36680
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2156,7 +2156,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-55126
+  m_Name: pb_Mesh-32876
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3025,7 +3025,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_5
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114122727322085200, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -3254,7 +3254,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58434
+  m_Name: pb_Mesh-36208
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3735,7 +3735,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_2
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114911117245880760, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -3781,10 +3781,10 @@ MonoBehaviour:
     type: 3}
   pool: {fileID: 1208995648}
   spawnOnStart: 1
-  maxStartVehicles: 30
-  maxRoadVehicles: 75
-  spawnInterval: 30
-  spawnCount: 10
+  maxStartVehicles: 50
+  maxRoadVehicles: 50
+  spawnInterval: 2
+  spawnCount: 1
   maxTrains: 20
   maxPedestrians: 100
 --- !u!4 &732118290
@@ -4261,7 +4261,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-59406
+  m_Name: pb_Mesh-37180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4972,10 +4972,30 @@ PrefabInstance:
       propertyPath: minimumPhaseInterval
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2325682158210394490, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: MaxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2325682158210394490, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_4
+      value: JunctionAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501769033038449810, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: maximumPhaseInterval
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549514ad6753145a09f1ead1e306524c, type: 3}
@@ -5768,7 +5788,7 @@ PrefabInstance:
     - target: {fileID: 6206482543846524339, guid: f011c0e35134ca6469c48ad5c11ff858,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_3
+      value: JunctionAI
       objectReference: {fileID: 0}
     - target: {fileID: 7102738374534755903, guid: f011c0e35134ca6469c48ad5c11ff858,
         type: 3}
@@ -5875,7 +5895,9 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1103991267}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4845959851107432461, guid: f011c0e35134ca6469c48ad5c11ff858, type: 3}
+    - {fileID: 6206482543846524339, guid: f011c0e35134ca6469c48ad5c11ff858, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f011c0e35134ca6469c48ad5c11ff858, type: 3}
 --- !u!43 &1103991267
 Mesh:
@@ -5883,7 +5905,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-55892
+  m_Name: pb_Mesh-22312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6196,7 +6218,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58422
+  m_Name: pb_Mesh-36196
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6360,7 +6382,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-59394
+  m_Name: pb_Mesh-37168
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7294,7 +7316,7 @@ PrefabInstance:
     - target: {fileID: 2477230632721252931, guid: b2f226b44ff9c4a0ba7cf62544d529be,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_6
+      value: JunctionAI
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114122727322085200, guid: b2f226b44ff9c4a0ba7cf62544d529be, type: 3}
@@ -9314,7 +9336,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58918
+  m_Name: pb_Mesh-36692
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9777,7 +9799,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-55114
+  m_Name: pb_Mesh-32864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10335,9 +10357,11 @@ PrefabInstance:
     - target: {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
       propertyPath: m_BehaviorName
-      value: JunctionAI_1
+      value: JunctionAI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2325682158210394490, guid: 549514ad6753145a09f1ead1e306524c, type: 3}
+    - {fileID: 3830293526209008836, guid: 549514ad6753145a09f1ead1e306524c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 549514ad6753145a09f1ead1e306524c, type: 3}
 --- !u!1 &2126270997
 GameObject:
