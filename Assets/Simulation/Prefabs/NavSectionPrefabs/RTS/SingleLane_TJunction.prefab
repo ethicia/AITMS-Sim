@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 33154225297834836}
   - component: {fileID: 64912037915040978}
   m_Layer: 11
-  m_Name: Vehicle
+  m_Name: Vehicle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 33446311250245538}
   - component: {fileID: 64635256891934420}
   m_Layer: 11
-  m_Name: Vehicle
+  m_Name: Vehicle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1406,7 +1406,7 @@ GameObject:
   - component: {fileID: 33368029553567222}
   - component: {fileID: 64890942025604710}
   m_Layer: 11
-  m_Name: Vehicle
+  m_Name: Vehicle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1624,7 +1624,7 @@ GameObject:
   - component: {fileID: 33996202165800086}
   - component: {fileID: 64375879871390716}
   m_Layer: 11
-  m_Name: Vehicle
+  m_Name: Vehicle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1678,7 +1678,7 @@ GameObject:
   - component: {fileID: 33854526489595244}
   - component: {fileID: 64492132438242098}
   m_Layer: 11
-  m_Name: Vehicle
+  m_Name: Vehicle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2232,7 +2232,7 @@ GameObject:
   - component: {fileID: 33795628457710002}
   - component: {fileID: 64265226342568732}
   m_Layer: 11
-  m_Name: Vehicle
+  m_Name: Vehicle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
