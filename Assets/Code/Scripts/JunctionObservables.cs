@@ -7,10 +7,12 @@ namespace Kawaiiju.Traffic
     {
         public int[] phaseTimings;
         public int[] phaseCounts;
+        public int currentPhase;
         public int minimumPhaseInterval = 5;
         public int maximumPhaseInterval = 25;
         JunctionObservables()
         {
+            currentPhase = 0;
             phaseTimings = new int[4] { 13, 13, 13, 13 };
             phaseCounts = new int[4] { 0, 0, 0, 0 };
         }

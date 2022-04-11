@@ -30,6 +30,9 @@ namespace Kawaiiju.Traffic
         public float timeRemaining;
         public bool timerIsRunning = false;
         private JunctionRLAgent RLAgent;
+        private Collector collector;
+        private float minCycle;
+        private float maxCycle;
         // -------------------------------------------------------------------
         // Initialization
 
@@ -38,6 +41,10 @@ namespace Kawaiiju.Traffic
             timeRemaining = phaseInterval;
             junctionObservables = gameObject.GetComponent<JunctionObservables>();
             RLAgent = gameObject.GetComponent<JunctionRLAgent>();
+            collector = gameObject.GetComponentInChildren<Collector>();
+
+            minCycle = junctionObservables.minimumPhaseInterval * laneBox.Length;
+            maxCycle = junctionObservables.maximumPhaseInterval * laneBox.Length;
 
             base.Start();
             if (phases.Length > 0)
@@ -50,8 +57,8 @@ namespace Kawaiiju.Traffic
         // Update
 
         private bool decisionTaken = false;
-        private int prevTotalCount = 0;
-        private int phasesPerEpisode = 4, phaseCount = 0;
+        float reward;
+
         private void Update()
         {
             if (type == PhaseType.Timed)
@@ -61,37 +68,30 @@ namespace Kawaiiju.Traffic
                 //fixed yellow time
                 if (!m_PhaseEnded && m_PhaseTimer > (phaseInterval - yellowTime))
                 {
-                    EndPhase();
-                    if (RLAgent != null && !decisionTaken)
+                    if (RLAgent != null)
                     {
-                        RLAgent.RequestDecision();
-                        decisionTaken = true;
+                        //scaling reward
+                        if (minCycle != maxCycle)
+                            reward = (collector.getAvgHaltTime() - minCycle) / (maxCycle - minCycle);
+                        else
+                            reward = 0f;
+                        RLAgent.AddReward(reward);
+
+                        if (m_CurrentPhase == 0)
+                        {
+                            Debug.Log(RLAgent.GetCumulativeReward());
+                            RLAgent.EndEpisode();
+                        }
                     }
+                    EndPhase();
                 }
                 if (m_PhaseTimer > phaseInterval)
                 {
-                    //adding rewards
-                    int totalCount = 0;
-                    for (int i = 0; i < laneBox.Length; i++)
-                        totalCount += laneBox[i].vehiclewithin;
-
+                    ChangePhase();
                     if (RLAgent != null)
                     {
-                        int rewards = prevTotalCount - totalCount;
-                        RLAgent.SetReward(rewards);
-                        //Debug.Log("rewards: " + rewards.ToString());
+                        RLAgent.RequestDecision();
                     }
-                    prevTotalCount = totalCount;
-
-                    decisionTaken = false;
-                    phaseCount++;
-
-                    if (RLAgent != null && phaseCount >= phasesPerEpisode)
-                    {
-                        RLAgent.EndEpisode();
-                        phaseCount = 0;
-                    }
-                    ChangePhase();
                 }
             }
 
@@ -151,6 +151,9 @@ namespace Kawaiiju.Traffic
                 m_CurrentPhase++;
             else
                 m_CurrentPhase = 0;
+
+            //assigning current phase
+            junctionObservables.currentPhase = m_CurrentPhase;
 
             //assigning phase intervals
             for (int i = 0; i < laneBox.Length; i++)

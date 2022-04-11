@@ -14,7 +14,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -25,7 +25,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -52,7 +52,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -63,7 +63,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -90,7 +90,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -101,7 +101,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -128,7 +128,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -139,7 +139,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -166,7 +166,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -177,7 +177,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -204,7 +204,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -215,7 +215,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -242,7 +242,7 @@ behaviors:
     network_settings:
       normalize: false
       hidden_units: 128
-      num_layers: 2
+      num_layers: 3
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -253,7 +253,7 @@ behaviors:
         network_settings:
           normalize: false
           hidden_units: 128
-          num_layers: 2
+          num_layers: 3
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
