@@ -22,6 +22,7 @@ TagManager:
   - RoundaboutConnection
   - RedLight
   - GreenLight
+  - Collector
   layers:
   - Default
   - TransparentFX
