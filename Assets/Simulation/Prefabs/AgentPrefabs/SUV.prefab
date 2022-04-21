@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3781889512982956300}
   - component: {fileID: 4235361006129573734}
   - component: {fileID: 4594832281579596391}
-  - component: {fileID: 3534145326849216696}
   - component: {fileID: 1127629164266645984}
+  - component: {fileID: -1077267562087263161}
   m_Layer: 0
   m_Name: SUV
   m_TagString: Gib
@@ -109,9 +109,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6340295041485768079}
   serializedVersion: 2
-  m_Mass: 0.5
-  m_Drag: 0.8
-  m_AngularDrag: 0.15
+  m_Mass: 0.3
+  m_Drag: 0.6
+  m_AngularDrag: 0.08
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -139,7 +139,26 @@ NavMeshAgent:
   m_BaseOffset: 0.6
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3534145326849216696
+--- !u!114 &1127629164266645984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6340295041485768079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a061561a4894bc3a9fd55bae51d3660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  movingSpeed: 0
+  minHaltDuration: 2
+  status: 0
+  totalHaltDuration: 0
+  haltCount: 0
+  avgHaltDuration: 0
+--- !u!114 &-1077267562087263161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,25 +174,6 @@ MonoBehaviour:
   maxSpeedIntput: 20
   maxSpeed: 0
   front: {fileID: 1482348437450426926}
---- !u!114 &1127629164266645984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6340295041485768079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a061561a4894bc3a9fd55bae51d3660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  movingSpeed: 0.5
-  minHaltDuration: 3
-  status: 0
-  totalHaltDuration: 0
-  haltCount: 0
-  avgHaltDuration: 0
 --- !u!1 &6910523620598376400
 GameObject:
   m_ObjectHideFlags: 0
