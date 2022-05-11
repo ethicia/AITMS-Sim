@@ -85,7 +85,7 @@ namespace Kawaiiju
 
         private bool m_Blocked;
 
-        private float m_BlockedDistance = .25f;
+        private float m_BlockedDistance = .75f;
         public float blockedDistance
         {
             get { return m_BlockedDistance; }
