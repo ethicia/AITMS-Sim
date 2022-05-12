@@ -85,7 +85,7 @@ namespace Kawaiiju
 
         private bool m_Blocked;
 
-        private float m_BlockedDistance = .75f;
+        private float m_BlockedDistance = 1.25f;
         public float blockedDistance
         {
             get { return m_BlockedDistance; }
@@ -95,13 +95,18 @@ namespace Kawaiiju
         private bool CheckBlocked()
         {
             Vector3 forward = transform.TransformDirection(Vector3.forward);
+            Vector3 halfExtent = new Vector3(0.2f, 0.2f, 0.2f);
             RaycastHit hit;
-            if (Physics.Raycast(front.position, forward, out hit))
+
+            if (Physics.BoxCast(front.position, halfExtent, forward, out hit))
             {
                 if (Vector3.Distance(front.position, hit.point) < m_BlockedDistance)
                 {
                     if (hit.transform.tag == "Gib" || hit.transform.tag == "Unit")
+                    {
+                        //agent.velocity = Vector3.zero;
                         return true;
+                    }
                 }
                 return false;
             }
@@ -141,6 +146,7 @@ namespace Kawaiiju
                 Gizmos.color = m_Blocked ? Color.red : Color.green;
                 Vector3 blockedRayEnd = front.TransformPoint(new Vector3(0, 0, m_BlockedDistance));
                 Gizmos.DrawLine(front.position, blockedRayEnd);
+                Gizmos.DrawWireCube(blockedRayEnd, new Vector3(0.4f, 0.4f, 0.4f));
             }
         }
     }
