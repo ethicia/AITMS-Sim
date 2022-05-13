@@ -2284,6 +2284,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4812139755637328}
   - component: {fileID: 114114186093999670}
+  - component: {fileID: 8292566316069766276}
+  - component: {fileID: 4932360035469190630}
+  - component: {fileID: 1272813488761067635}
   m_Layer: 0
   m_Name: SingleLane_TJunctionLTS
   m_TagString: T
@@ -2387,40 +2390,78 @@ MonoBehaviour:
     negativeLights:
     - {fileID: 2142669334152799521}
     - {fileID: 5772436145385298768}
-  - positiveZones:
-    - {fileID: 114874227528433142}
-    - {fileID: 114835337480997954}
-    - {fileID: 114840155570256362}
-    - {fileID: 114613905976668932}
-    - {fileID: 114245117798839572}
-    - {fileID: 114154760493181438}
-    negativeZones:
-    - {fileID: 114359887625236700}
-    - {fileID: 114308561951114898}
-    - {fileID: 114839755049147930}
-    positiveLights: []
-    negativeLights:
-    - {fileID: 5772436145385298768}
-    - {fileID: 2142669334152799521}
-    - {fileID: 5130664333043955356}
   triggers: []
-  minimumPhaseInterval: 3
-  maximumPhaseInterval: 10
-  averageTime: 1
   yellowTime: 5
-  firstLaneCount: 0
-  secondLaneCount: 0
-  thirdLaneCount: 0
-  fourthLaneCount: 0
+  junctionObservables: {fileID: 0}
   debug: 0
   another: {fileID: 0}
-  firstLaneBox: {fileID: 4348635027260241134}
-  secondLaneBox: {fileID: 2771363710889021800}
-  thirdLaneBox: {fileID: 1247551197324682563}
-  fourthLaneBox: {fileID: 0}
+  laneBox: []
   textOnCube: []
   timeRemaining: 0
   timerIsRunning: 0
+--- !u!114 &8292566316069766276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858811064698484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4ad4139c45bf6e4bd5720cdeda8b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phaseTimings: 0d0000000d0000000d0000000d000000
+  phaseCounts: 00000000000000000000000000000000
+  currentPhase: 0
+  minimumPhaseInterval: 25
+  maximumPhaseInterval: 25
+--- !u!114 &4932360035469190630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858811064698484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 6
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 3
+      BranchSizes: 
+    VectorActionSize: 03000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
+--- !u!114 &1272813488761067635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858811064698484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc673ed64fa2a72208c1499c2ea708f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
 --- !u!1 &442118480237006557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,12 +2924,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3ce4894d702e5c49ac1d2afe2f29769, type: 3}
---- !u!4 &1647804682739653239 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1224550480059452476, guid: b3ce4894d702e5c49ac1d2afe2f29769,
-    type: 3}
-  m_PrefabInstance: {fileID: 441449024715118155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5772436145385298768 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6213709213878095131, guid: b3ce4894d702e5c49ac1d2afe2f29769,
@@ -2901,6 +2936,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a0c6f97d19f4ee2bd644e806c9f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1647804682739653239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1224550480059452476, guid: b3ce4894d702e5c49ac1d2afe2f29769,
+    type: 3}
+  m_PrefabInstance: {fileID: 441449024715118155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &983178501568748398
 PrefabInstance:
   m_ObjectHideFlags: 0
