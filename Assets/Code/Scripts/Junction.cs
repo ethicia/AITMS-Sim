@@ -171,7 +171,7 @@ namespace Kawaiiju.Traffic
             {
                 Debug.Log("changing to phase " + m_CurrentPhase);
                 Debug.Log("phase interval " + phaseInterval.ToString());
-                //Debug.Log("vehicle count "+)
+                Debug.Log("vehicle count " + laneBox[m_CurrentPhase] + " " + laneBox[m_CurrentPhase].vehiclewithin);
             }
         }
 

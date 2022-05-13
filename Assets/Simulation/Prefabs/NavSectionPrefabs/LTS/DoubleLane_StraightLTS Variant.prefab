@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleLane_StraightLTS Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8087481801067642662, guid: 862a59f1fa3439e42860b63706873758,
+        type: 3}
+      propertyPath: speedLimitInput
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 8893110181964511836, guid: 862a59f1fa3439e42860b63706873758,
         type: 3}
       propertyPath: m_TagString

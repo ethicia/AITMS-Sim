@@ -85,7 +85,7 @@ namespace Kawaiiju
 
         private bool m_Blocked;
 
-        private float m_BlockedDistance = 0.5f;
+        private float m_BlockedDistance = 0.75f;
         public float blockedDistance
         {
             get { return m_BlockedDistance; }
@@ -95,7 +95,7 @@ namespace Kawaiiju
         private bool CheckBlocked()
         {
             Vector3 forward = transform.TransformDirection(Vector3.forward);
-            Vector3 halfExtent = new Vector3(0.1f, 0.1f, 0.1f);
+            Vector3 halfExtent = new Vector3(0.2f, 0.2f, 0.2f);
             RaycastHit hit;
 
             if (Physics.BoxCast(front.position, halfExtent, forward, out hit))
