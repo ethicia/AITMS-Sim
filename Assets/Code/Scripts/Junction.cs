@@ -20,7 +20,7 @@ namespace Kawaiiju.Traffic
         public PhaseType type = PhaseType.Timed;
         public Phase[] phases;
         public JunctionTrigger[] triggers;
-        private float phaseInterval = 5;
+        private float phaseInterval = 15;
         public float yellowTime = 5;
         [HideInInspector] public JunctionObservables junctionObservables;
         public bool debug = false;
@@ -43,8 +43,8 @@ namespace Kawaiiju.Traffic
             RLAgent = gameObject.GetComponent<JunctionRLAgent>();
             collector = gameObject.GetComponentInChildren<Collector>();
 
-            minCycle = junctionObservables.minimumPhaseInterval * laneBox.Length;
-            maxCycle = junctionObservables.maximumPhaseInterval * laneBox.Length;
+            minCycle = junctionObservables.minimumPhaseInterval * phases.Length;
+            maxCycle = junctionObservables.maximumPhaseInterval * phases.Length;
 
             base.Start();
             if (phases.Length > 0)
@@ -147,16 +147,18 @@ namespace Kawaiiju.Traffic
         {
             m_PhaseTimer = 0;
             m_PhaseEnded = false;
+            /*
             if (m_CurrentPhase < phases.Length - 1)
                 m_CurrentPhase++;
             else
-                m_CurrentPhase = 0;
+                m_CurrentPhase = 0;*/
+            m_CurrentPhase = (m_CurrentPhase + 1) % phases.Length;
 
             //assigning current phase
             junctionObservables.currentPhase = m_CurrentPhase;
 
             //assigning phase intervals
-            for (int i = 0; i < laneBox.Length; i++)
+            for (int i = 0; i < phases.Length; i++)
             {
                 phaseInterval = junctionObservables.phaseTimings[i];
             }

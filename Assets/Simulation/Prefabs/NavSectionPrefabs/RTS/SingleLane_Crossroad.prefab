@@ -214,26 +214,6 @@ MonoBehaviour:
     - {fileID: 4810433839457835214}
     - {fileID: 7600923272736399513}
     - {fileID: 866954342697120422}
-  - positiveZones:
-    - {fileID: 114976568831869344}
-    - {fileID: 114118529040553698}
-    - {fileID: 114762802459194906}
-    - {fileID: 114322270026056918}
-    - {fileID: 114165871004840010}
-    - {fileID: 114646854523298400}
-    - {fileID: 114553862134091976}
-    - {fileID: 114830410412979856}
-    negativeZones:
-    - {fileID: 114208428892046014}
-    - {fileID: 114909886583593178}
-    - {fileID: 114435639557337326}
-    - {fileID: 114124580962362572}
-    positiveLights: []
-    negativeLights:
-    - {fileID: 4810433839457835214}
-    - {fileID: 7600923272736399513}
-    - {fileID: 866954342697120422}
-    - {fileID: 4853549119635557811}
   triggers: []
   yellowTime: 5
   junctionObservables: {fileID: 0}
@@ -266,7 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseTimings: 0f0000000f0000000f0000000f000000
   phaseCounts: 00000000000000000000000000000000
-  minimumPhaseInterval: 5
+  currentPhase: 0
+  minimumPhaseInterval: 25
   maximumPhaseInterval: 25
 --- !u!114 &3830293526209008836
 MonoBehaviour:
@@ -4964,7 +4945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4233808409161112}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9026915030401243079
 MeshFilter:
@@ -5449,6 +5430,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3ce4894d702e5c49ac1d2afe2f29769, type: 3}
+--- !u!4 &290453179900615145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1224550480059452476, guid: b3ce4894d702e5c49ac1d2afe2f29769,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511414576399357397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4810433839457835214 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6213709213878095131, guid: b3ce4894d702e5c49ac1d2afe2f29769,
@@ -5461,12 +5448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a0c6f97d19f4ee2bd644e806c9f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &290453179900615145 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1224550480059452476, guid: b3ce4894d702e5c49ac1d2afe2f29769,
-    type: 3}
-  m_PrefabInstance: {fileID: 1511414576399357397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540445126098092200
 PrefabInstance:
   m_ObjectHideFlags: 0
