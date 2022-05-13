@@ -17,7 +17,7 @@ public class JunctionRLAgent : Agent
     public override void OnEpisodeBegin()
     {
         SetReward(0);
-        Debug.Log("New Episode " + gameObject.GetInstanceID().ToString());
+        //Debug.Log("New Episode " + gameObject.GetInstanceID().ToString());
     }
 
     public override void CollectObservations(VectorSensor sensor)
