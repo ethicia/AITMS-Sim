@@ -79,7 +79,7 @@ namespace Kawaiiju.Traffic
 
                         if (m_CurrentPhase == 0)
                         {
-                            Debug.Log(RLAgent.GetCumulativeReward());
+                            Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
                             RLAgent.EndEpisode();
                         }
                     }

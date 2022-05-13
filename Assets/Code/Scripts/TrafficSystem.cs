@@ -61,11 +61,11 @@ namespace Kawaiiju.Traffic
             {
                 for (int i = 0; i < maxStartVehicles; i++)
                     SpawnRoadVehicle(true);
-                
+
                 if (trainsEnabled)
                     for (int i = 0; i < maxTrains; i++)
                         SpawnTrain(true);
-                
+
                 for (int i = 0; i < maxPedestrians; i++)
                     SpawnPedestrian(true);
             }
@@ -82,17 +82,18 @@ namespace Kawaiiju.Traffic
                 SpawnPedestrian(true);
             if (Input.GetKeyUp(KeyCode.Return))
                 SpawnRoadVehicle(true);
-            if(trainsEnabled)
+            if (trainsEnabled)
                 if (Input.GetKeyUp(KeyCode.RightShift))
                     SpawnTrain(true);
 
             if (spawnTimer >= spawnInterval)
             {
+                Debug.Log("spawning vehicles");
                 for (int i = 0; i < spawnCount; i++)
                     if (pool.childCount < maxRoadVehicles)
                         SpawnRoadVehicle(true);
                 spawnTimer = 0; // reset timer
-                //Debug.Log("Spawned vehicles");
+
             }
 
         }

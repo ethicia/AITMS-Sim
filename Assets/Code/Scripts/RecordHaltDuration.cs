@@ -11,7 +11,7 @@ namespace Kawaiiju.Traffic
     public class RecordHaltDuration : MonoBehaviour
     {
 
-        public UnityEngine.AI.NavMeshAgent agent;
+        [HideInInspector] public UnityEngine.AI.NavMeshAgent agent;
         public float movingSpeed = 1;
         public float minHaltDuration = 2.0f;
         [HideInInspector] public Status status;
@@ -19,6 +19,7 @@ namespace Kawaiiju.Traffic
         [HideInInspector] public int haltCount;
         [HideInInspector] public float avgHaltDuration;
         public float haltPunishment;
+        public float haltThreshold = 60.0f;
         private long stopTime;
         private float haltDuration;
 
@@ -40,6 +41,11 @@ namespace Kawaiiju.Traffic
         {
             float velocity = agent.velocity.magnitude;
             haltDuration += Time.deltaTime;
+            if (haltDuration >= haltThreshold)
+            {
+                Debug.Log("halt threshold reached; deleting vehicle");
+                Destroy(this.gameObject);
+            }
 
             switch (status)
             {

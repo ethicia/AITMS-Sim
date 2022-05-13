@@ -458,7 +458,7 @@ PrefabInstance:
     - target: {fileID: 114784332008515400, guid: 45becbc405ff2c246b3d68286fdd7db8,
         type: 3}
       propertyPath: debug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45becbc405ff2c246b3d68286fdd7db8, type: 3}
@@ -5062,6 +5062,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 600289706}
+    - target: {fileID: 6206482543846524339, guid: 2e9a55f521e907e469546959442b91d7,
+        type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7110607920572440068, guid: 2e9a55f521e907e469546959442b91d7,
         type: 3}
       propertyPath: m_Mesh
@@ -5615,12 +5620,12 @@ MonoBehaviour:
   trainCarriagePrefab: {fileID: 1623311671667096, guid: e25b77a78554a41a3820602008efe36b,
     type: 3}
   pool: {fileID: 346428693}
-  spawnOnStart: 1
+  spawnOnStart: 0
   trainsEnabled: 0
   maxStartVehicles: 150
   maxRoadVehicles: 150
-  spawnInterval: 15
-  spawnCount: 5
+  spawnInterval: 30
+  spawnCount: 30
   maxTrains: 0
   maxPedestrians: 0
 --- !u!4 &1196417863
