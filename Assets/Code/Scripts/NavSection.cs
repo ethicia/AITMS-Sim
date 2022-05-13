@@ -21,7 +21,7 @@ namespace Kawaiiju.Traffic
 
         public virtual void Start()
         {
-            speedLimit = speedLimit * AITMSConfig.speedUpMagnitude;
+            speedLimit = speedLimitInput * AITMSConfig.speedUpMagnitude;
             foreach (NavConnection connection in connections)
                 connection.navSection = this;
         }

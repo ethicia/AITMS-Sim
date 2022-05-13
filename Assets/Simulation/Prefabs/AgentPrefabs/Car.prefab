@@ -133,7 +133,7 @@ NavMeshAgent:
   m_AngularSpeed: 100000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0.55
@@ -174,6 +174,7 @@ MonoBehaviour:
   totalHaltDuration: 0
   haltCount: 0
   avgHaltDuration: 0
+  haltPunishment: 0
 --- !u!1 &1813463833871512
 GameObject:
   m_ObjectHideFlags: 0

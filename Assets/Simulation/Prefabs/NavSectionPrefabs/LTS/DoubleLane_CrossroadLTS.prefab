@@ -2524,6 +2524,11 @@ PrefabInstance:
       objectReference: {fileID: 5865252544896574160}
     - target: {fileID: 114784332008515400, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
+      propertyPath: speedLimitInput
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114784332008515400, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
       propertyPath: connections.Array.size
       value: 16
       objectReference: {fileID: 0}
@@ -2721,6 +2726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509057904136837057, guid: 549514ad6753145a09f1ead1e306524c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5039999030393275474, guid: 549514ad6753145a09f1ead1e306524c,
         type: 3}
