@@ -44,7 +44,7 @@ namespace Kawaiiju.Traffic
             if (haltDuration >= haltThreshold)
             {
                 Debug.Log("halt threshold reached; deleting vehicle");
-                Destroy(this.gameObject);
+                this.gameObject.GetComponent<Vehicle>().destroyVehicle();
             }
 
             switch (status)

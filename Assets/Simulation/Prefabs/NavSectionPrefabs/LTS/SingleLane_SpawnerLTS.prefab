@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SingleLane_SpawnerLTS
       objectReference: {fileID: 0}
+    - target: {fileID: 1138728264224080, guid: 2fae821b444904e988358333371dbee7, type: 3}
+      propertyPath: m_TagString
+      value: Spawner
+      objectReference: {fileID: 0}
     - target: {fileID: 4737159651474342, guid: 2fae821b444904e988358333371dbee7, type: 3}
       propertyPath: m_RootOrder
       value: 0

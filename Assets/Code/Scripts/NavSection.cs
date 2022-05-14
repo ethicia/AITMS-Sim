@@ -31,6 +31,7 @@ namespace Kawaiiju.Traffic
 
         public bool TryGetVehicleSpawn(out VehicleSpawn spawn)
         {
+            //Debug.Log(m_CurrentVehicles.Count + " " + vehicleSpawns.Length);
             if (m_CurrentVehicles.Count == 0 && vehicleSpawns.Length > 0)
             {
                 int index = UnityEngine.Random.Range(0, vehicleSpawns.Length);
@@ -38,6 +39,7 @@ namespace Kawaiiju.Traffic
                 return true;
             }
             spawn = null;
+            //Debug.Log("spawning attemp : false");
             return false;
         }
 

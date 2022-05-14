@@ -23,6 +23,7 @@ TagManager:
   - RedLight
   - GreenLight
   - Collector
+  - Spawner
   layers:
   - Default
   - TransparentFX

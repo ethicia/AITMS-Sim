@@ -75,7 +75,7 @@ namespace Kawaiiju
             }
             if (col.tag == "Detroyer")
             {
-                Destroy(this.gameObject);
+                destroyVehicle();
             }
             base.OnTriggerEnter(col);
         }
@@ -95,7 +95,7 @@ namespace Kawaiiju
         private bool CheckBlocked()
         {
             Vector3 forward = transform.TransformDirection(Vector3.forward);
-            Vector3 halfExtent = new Vector3(0.12f, 0.12f, 0.12f);
+            Vector3 halfExtent = new Vector3(0.05f, 0.05f, 0.05f);
             RaycastHit hit;
 
             if (Physics.BoxCast(front.position, halfExtent, forward, out hit))
@@ -146,8 +146,14 @@ namespace Kawaiiju
                 Gizmos.color = m_Blocked ? Color.red : Color.green;
                 Vector3 blockedRayEnd = front.TransformPoint(new Vector3(0, 0, m_BlockedDistance));
                 Gizmos.DrawLine(front.position, blockedRayEnd);
-                Gizmos.DrawWireCube(blockedRayEnd, new Vector3(0.24f, 0.24f, 0.24f));
+                Gizmos.DrawWireCube(blockedRayEnd, new Vector3(0.1f, 0.1f, 0.1f));
             }
+        }
+
+        public void destroyVehicle()
+        {
+            RegisterVehicle(m_CurrentNavSection, false);
+            Destroy(this.gameObject);
         }
     }
 }

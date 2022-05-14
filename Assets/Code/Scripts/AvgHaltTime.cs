@@ -13,6 +13,7 @@ namespace Kawaiiju.Traffic
         public float globalHaltAverage;
         public string dataFilePath;
         public float dataInterval = 15;
+        public bool log = true;
 
         private float timer;
 
@@ -30,8 +31,11 @@ namespace Kawaiiju.Traffic
             if (timer < 0)
             {
                 //append data to csv
-                string entry = string.Format("{0},{1},{2}\n", Time.fixedTime, carCount, globalHaltAverage);
-                File.AppendAllText(dataFilePath, entry);
+                if (log)
+                {
+                    string entry = string.Format("{0},{1},{2}\n", Time.fixedTime, carCount, globalHaltAverage);
+                    File.AppendAllText(dataFilePath, entry);
+                }
 
                 //reset timer
                 timer = dataInterval;

@@ -2391,7 +2391,7 @@ MonoBehaviour:
     - {fileID: 2142669334152799521}
     - {fileID: 5772436145385298768}
   triggers: []
-  yellowTime: 5
+  yellowTime: 10
   junctionObservables: {fileID: 0}
   debug: 0
   another: {fileID: 0}
@@ -2414,8 +2414,8 @@ MonoBehaviour:
   phaseTimings: 0d0000000d0000000d0000000d000000
   phaseCounts: 00000000000000000000000000000000
   currentPhase: 0
-  minimumPhaseInterval: 25
-  maximumPhaseInterval: 25
+  minimumPhaseInterval: 30
+  maximumPhaseInterval: 30
 --- !u!114 &4932360035469190630
 MonoBehaviour:
   m_ObjectHideFlags: 0

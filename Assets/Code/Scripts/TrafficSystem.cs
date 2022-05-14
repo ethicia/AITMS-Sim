@@ -49,7 +49,8 @@ namespace Kawaiiju.Traffic
         {
             Road[] roadsFound = FindObjectsOfType<Road>();
             foreach (Road r in roadsFound)
-                m_Roads.Add(r);
+                if (r.tag == "Spawner")
+                    m_Roads.Add(r);
             if (trainsEnabled)
             {
                 Track[] tracksFound = FindObjectsOfType<Track>();
@@ -62,9 +63,9 @@ namespace Kawaiiju.Traffic
                 for (int i = 0; i < maxStartVehicles; i++)
                     SpawnRoadVehicle(true);
 
-                if (trainsEnabled)
+                /*if (trainsEnabled)
                     for (int i = 0; i < maxTrains; i++)
-                        SpawnTrain(true);
+                        SpawnTrain(true);*/
 
                 for (int i = 0; i < maxPedestrians; i++)
                     SpawnPedestrian(true);
@@ -88,7 +89,7 @@ namespace Kawaiiju.Traffic
 
             if (spawnTimer >= spawnInterval)
             {
-                Debug.Log("spawning vehicles");
+                //Debug.Log("pool child count: " + pool.childCount + ";spawning vehicles");
                 for (int i = 0; i < spawnCount; i++)
                     if (pool.childCount < maxRoadVehicles)
                         SpawnRoadVehicle(true);

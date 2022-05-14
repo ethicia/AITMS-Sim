@@ -242,8 +242,8 @@ MonoBehaviour:
   phaseTimings: 0d0000000d0000000d0000000d000000
   phaseCounts: 00000000000000000000000000000000
   currentPhase: 0
-  minimumPhaseInterval: 25
-  maximumPhaseInterval: 25
+  minimumPhaseInterval: 30
+  maximumPhaseInterval: 30
 --- !u!114 &5788337877156686377
 MonoBehaviour:
   m_ObjectHideFlags: 0
