@@ -12,6 +12,7 @@ namespace Kawaiiju
     {
         private NavSection m_CurrentNavSection;
         private NavConnection m_CurrentOutConnection;
+        private LaneVehicleCount laneBox;
 
         // -------------------------------------------------------------------
         // Properties
@@ -77,7 +78,19 @@ namespace Kawaiiju
             {
                 destroyVehicle();
             }
+            if (col.tag == "FirstLane" || col.tag == "SecondLane" || col.tag == "ThirdLane" || col.tag == "FourthLane")
+            {
+                laneBox = col.gameObject.GetComponent<LaneVehicleCount>();
+            }
             base.OnTriggerEnter(col);
+        }
+
+        private void OnTriggerExit(Collider col)
+        {
+            if (col.tag == "FirstLane" || col.tag == "SecondLane" || col.tag == "ThirdLane" || col.tag == "FourthLane")
+            {
+                laneBox = null;
+            }
         }
 
         // -------------------------------------------------------------------
@@ -153,6 +166,11 @@ namespace Kawaiiju
         public void destroyVehicle()
         {
             RegisterVehicle(m_CurrentNavSection, false);
+            if (laneBox != null)
+            {
+                laneBox.vehiclewithin--;
+                Debug.Log("Lane box vehicle count corrected");
+            }
             Destroy(this.gameObject);
         }
     }

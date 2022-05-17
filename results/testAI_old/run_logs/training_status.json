@@ -1,0 +1,65 @@
+{
+    "TestAI": {
+        "checkpoints": [
+            {
+                "steps": 2966,
+                "file_path": "results/testAI/TestAI/TestAI-2966.onnx",
+                "reward": -4.7207699518355115,
+                "creation_time": 1652638378.3853693,
+                "auxillary_file_paths": [
+                    "results/testAI/TestAI/TestAI-2966.pt"
+                ]
+            },
+            {
+                "steps": 2982,
+                "file_path": "results/testAI/TestAI/TestAI-2982.onnx",
+                "reward": -4.7208019184842005,
+                "creation_time": 1652638404.8949447,
+                "auxillary_file_paths": [
+                    "results/testAI/TestAI/TestAI-2982.pt"
+                ]
+            },
+            {
+                "steps": 2998,
+                "file_path": "results/testAI/TestAI/TestAI-2998.onnx",
+                "reward": -4.719966757039168,
+                "creation_time": 1652638430.9135356,
+                "auxillary_file_paths": [
+                    "results/testAI/TestAI/TestAI-2998.pt"
+                ]
+            },
+            {
+                "steps": 3014,
+                "file_path": "results/testAI/TestAI/TestAI-3014.onnx",
+                "reward": -4.719272323340086,
+                "creation_time": 1652638460.7440069,
+                "auxillary_file_paths": [
+                    "results/testAI/TestAI/TestAI-3014.pt"
+                ]
+            },
+            {
+                "steps": 3026,
+                "file_path": "results/testAI/TestAI/TestAI-3026.onnx",
+                "reward": -4.71761619683468,
+                "creation_time": 1652638478.75211,
+                "auxillary_file_paths": [
+                    "results/testAI/TestAI/TestAI-3026.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3026,
+            "file_path": "results/testAI/TestAI.onnx",
+            "reward": -4.71761619683468,
+            "creation_time": 1652638478.75211,
+            "auxillary_file_paths": [
+                "results/testAI/TestAI/TestAI-3026.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.26.0",
+        "torch_version": "1.8.1+cu102"
+    }
+}

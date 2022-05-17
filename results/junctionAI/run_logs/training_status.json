@@ -1,0 +1,65 @@
+{
+    "JunctionAI": {
+        "checkpoints": [
+            {
+                "steps": 884,
+                "file_path": "results/junctionAI/JunctionAI/JunctionAI-884.onnx",
+                "reward": -4.510233796020438,
+                "creation_time": 1652494484.4842315,
+                "auxillary_file_paths": [
+                    "results/junctionAI/JunctionAI/JunctionAI-884.pt"
+                ]
+            },
+            {
+                "steps": 896,
+                "file_path": "results/junctionAI/JunctionAI/JunctionAI-896.onnx",
+                "reward": -4.514969343585627,
+                "creation_time": 1652494497.0001378,
+                "auxillary_file_paths": [
+                    "results/junctionAI/JunctionAI/JunctionAI-896.pt"
+                ]
+            },
+            {
+                "steps": 912,
+                "file_path": "results/junctionAI/JunctionAI/JunctionAI-912.onnx",
+                "reward": -4.51346455645143,
+                "creation_time": 1652494522.0676916,
+                "auxillary_file_paths": [
+                    "results/junctionAI/JunctionAI/JunctionAI-912.pt"
+                ]
+            },
+            {
+                "steps": 928,
+                "file_path": "results/junctionAI/JunctionAI/JunctionAI-928.onnx",
+                "reward": -4.516276683272986,
+                "creation_time": 1652494548.3618233,
+                "auxillary_file_paths": [
+                    "results/junctionAI/JunctionAI/JunctionAI-928.pt"
+                ]
+            },
+            {
+                "steps": 936,
+                "file_path": "results/junctionAI/JunctionAI/JunctionAI-936.onnx",
+                "reward": -4.512336695296133,
+                "creation_time": 1652494565.8541565,
+                "auxillary_file_paths": [
+                    "results/junctionAI/JunctionAI/JunctionAI-936.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 936,
+            "file_path": "results/junctionAI/JunctionAI.onnx",
+            "reward": -4.512336695296133,
+            "creation_time": 1652494565.8541565,
+            "auxillary_file_paths": [
+                "results/junctionAI/JunctionAI/JunctionAI-936.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.26.0",
+        "torch_version": "1.8.1+cu102"
+    }
+}

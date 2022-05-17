@@ -58,9 +58,17 @@ namespace Kawaiiju.Traffic
 
         private bool decisionTaken = false;
         float reward;
+        int totalLaneCount;
+        float scaledHaltTime;
 
         private void Update()
         {
+            //updating vehicle counts
+            for (int i = 0; i < laneBox.Length; i++)
+            {
+                junctionObservables.phaseCounts[i] = laneBox[i].vehiclewithin;
+            }
+
             if (type == PhaseType.Timed)
             {
                 m_PhaseTimer += Time.deltaTime;
@@ -72,16 +80,28 @@ namespace Kawaiiju.Traffic
                     {
                         //scaling reward
                         if (minCycle != maxCycle)
-                            reward = (collector.getAvgHaltTime() - minCycle) / (maxCycle - minCycle);
+                        {
+                            scaledHaltTime = (collector.getAvgHaltTime() - minCycle) / (maxCycle - minCycle);
+                            /*totalLaneCount = 0;
+                            for (int i = 0; i < phases.Length; i++)
+                                totalLaneCount += laneBox[i].vehiclewithin;
+                            reward = scaledHaltTime - (totalLaneCount / phases.Length);*/
+                            reward = scaledHaltTime - laneBox[m_CurrentPhase].vehiclewithin;
+                        }
                         else
                             reward = 0f;
+
                         RLAgent.AddReward(reward);
 
-                        if (m_CurrentPhase == 0)
+                        /*
+                        if (m_CurrentPhase == 3)
                         {
                             Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
                             RLAgent.EndEpisode();
-                        }
+                        }*/
+
+                        Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
+                        RLAgent.EndEpisode();
                     }
                     EndPhase();
                 }
@@ -93,12 +113,6 @@ namespace Kawaiiju.Traffic
                         RLAgent.RequestDecision();
                     }
                 }
-            }
-
-            //updating vehicle counts
-            for (int i = 0; i < laneBox.Length; i++)
-            {
-                junctionObservables.phaseCounts[i] = laneBox[i].vehiclewithin;
             }
 
             //timer display

@@ -175,7 +175,7 @@ MonoBehaviour:
   haltCount: 0
   avgHaltDuration: 0
   haltPunishment: 0
-  haltThreshold: 100
+  haltThreshold: 250
 --- !u!1 &1813463833871512
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ namespace Kawaiiju.Traffic
         JunctionObservables()
         {
             currentPhase = 0;
-            phaseTimings = new int[4] { 13, 13, 13, 13 };
+            phaseTimings = new int[4] { 30, 30, 30, 30 };
             phaseCounts = new int[4] { 0, 0, 0, 0 };
         }
 

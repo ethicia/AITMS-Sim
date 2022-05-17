@@ -2285,8 +2285,6 @@ GameObject:
   - component: {fileID: 4812139755637328}
   - component: {fileID: 114114186093999670}
   - component: {fileID: 8292566316069766276}
-  - component: {fileID: 4932360035469190630}
-  - component: {fileID: 1272813488761067635}
   m_Layer: 0
   m_Name: SingleLane_TJunctionLTS
   m_TagString: T
@@ -2314,6 +2312,7 @@ Transform:
   - {fileID: 3570206755242744212}
   - {fileID: 3102337228790994062}
   - {fileID: 733606107296251013}
+  - {fileID: 270865076093863486}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
@@ -2399,6 +2398,7 @@ MonoBehaviour:
   textOnCube: []
   timeRemaining: 0
   timerIsRunning: 0
+  m_PhaseTimer: 0
 --- !u!114 &8292566316069766276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,57 +2411,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4ad4139c45bf6e4bd5720cdeda8b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseTimings: 0d0000000d0000000d0000000d000000
+  phaseTimings: 1e0000001e0000001e0000001e000000
   phaseCounts: 00000000000000000000000000000000
   currentPhase: 0
-  minimumPhaseInterval: 30
-  maximumPhaseInterval: 30
---- !u!114 &4932360035469190630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858811064698484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BrainParameters:
-    VectorObservationSize: 9
-    NumStackedVectorObservations: 1
-    m_ActionSpec:
-      m_NumContinuousActions: 4
-      BranchSizes: 
-    VectorActionSize: 04000000
-    VectorActionDescriptions: []
-    VectorActionSpaceType: 1
-    hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
-  m_InferenceDevice: 0
-  m_BehaviorType: 0
-  m_BehaviorName: My Behavior
-  TeamId: 0
-  m_UseChildSensors: 1
-  m_UseChildActuators: 1
-  m_ObservableAttributeHandling: 0
---- !u!114 &1272813488761067635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858811064698484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc673ed64fa2a72208c1499c2ea708f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
+  minimumPhaseInterval: 60
+  maximumPhaseInterval: 60
 --- !u!1 &442118480237006557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,6 +2776,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vehiclewithin: 0
+--- !u!1 &4483579555578927167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270865076093863486}
+  - component: {fileID: 1303062592152809363}
+  - component: {fileID: 5863533240722367973}
+  - component: {fileID: 1424860182681129763}
+  m_Layer: 0
+  m_Name: CollectorCube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &270865076093863486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483579555578927167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4812139755637328}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1303062592152809363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483579555578927167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5863533240722367973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483579555578927167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192c171c39b2e6d2d8b5301a500e1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1424860182681129763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483579555578927167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba0de061dc6cc6229e7a9f1664e1f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  junctions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  observables: 
 --- !u!1 &7441456580673601032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,6 +2954,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3ce4894d702e5c49ac1d2afe2f29769, type: 3}
+--- !u!4 &1647804682739653239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1224550480059452476, guid: b3ce4894d702e5c49ac1d2afe2f29769,
+    type: 3}
+  m_PrefabInstance: {fileID: 441449024715118155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5772436145385298768 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6213709213878095131, guid: b3ce4894d702e5c49ac1d2afe2f29769,
@@ -2936,12 +2972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a0c6f97d19f4ee2bd644e806c9f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1647804682739653239 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1224550480059452476, guid: b3ce4894d702e5c49ac1d2afe2f29769,
-    type: 3}
-  m_PrefabInstance: {fileID: 441449024715118155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &983178501568748398
 PrefabInstance:
   m_ObjectHideFlags: 0
