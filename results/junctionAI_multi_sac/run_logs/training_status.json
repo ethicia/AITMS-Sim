@@ -1,0 +1,95 @@
+{
+    "JunctionAI_2": {
+        "checkpoints": [
+            {
+                "steps": 1253,
+                "file_path": "results/junctionAI_multi_sac/JunctionAI_2/JunctionAI_2-1253.onnx",
+                "reward": null,
+                "creation_time": 1652934126.6048522,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_sac/JunctionAI_2/JunctionAI_2-1253.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1253,
+            "file_path": "results/junctionAI_multi_sac/JunctionAI_2.onnx",
+            "reward": null,
+            "creation_time": 1652934126.6048522,
+            "auxillary_file_paths": [
+                "results/junctionAI_multi_sac/JunctionAI_2/JunctionAI_2-1253.pt"
+            ]
+        }
+    },
+    "JunctionAI_1": {
+        "checkpoints": [
+            {
+                "steps": 1233,
+                "file_path": "results/junctionAI_multi_sac/JunctionAI_1/JunctionAI_1-1233.onnx",
+                "reward": null,
+                "creation_time": 1652934126.7409675,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_sac/JunctionAI_1/JunctionAI_1-1233.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1233,
+            "file_path": "results/junctionAI_multi_sac/JunctionAI_1.onnx",
+            "reward": null,
+            "creation_time": 1652934126.7409675,
+            "auxillary_file_paths": [
+                "results/junctionAI_multi_sac/JunctionAI_1/JunctionAI_1-1233.pt"
+            ]
+        }
+    },
+    "JunctionAI_4": {
+        "checkpoints": [
+            {
+                "steps": 1259,
+                "file_path": "results/junctionAI_multi_sac/JunctionAI_4/JunctionAI_4-1259.onnx",
+                "reward": null,
+                "creation_time": 1652934126.8539915,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_sac/JunctionAI_4/JunctionAI_4-1259.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1259,
+            "file_path": "results/junctionAI_multi_sac/JunctionAI_4.onnx",
+            "reward": null,
+            "creation_time": 1652934126.8539915,
+            "auxillary_file_paths": [
+                "results/junctionAI_multi_sac/JunctionAI_4/JunctionAI_4-1259.pt"
+            ]
+        }
+    },
+    "JunctionAI_3": {
+        "checkpoints": [
+            {
+                "steps": 1227,
+                "file_path": "results/junctionAI_multi_sac/JunctionAI_3/JunctionAI_3-1227.onnx",
+                "reward": null,
+                "creation_time": 1652934126.9782817,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_sac/JunctionAI_3/JunctionAI_3-1227.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1227,
+            "file_path": "results/junctionAI_multi_sac/JunctionAI_3.onnx",
+            "reward": null,
+            "creation_time": 1652934126.9782817,
+            "auxillary_file_paths": [
+                "results/junctionAI_multi_sac/JunctionAI_3/JunctionAI_3-1227.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.26.0",
+        "torch_version": "1.8.1+cu102"
+    }
+}
