@@ -86,7 +86,7 @@ namespace Kawaiiju.Traffic
                             for (int i = 0; i < phases.Length; i++)
                                 totalLaneCount += laneBox[i].vehiclewithin;
                             reward = scaledHaltTime - (totalLaneCount / phases.Length);*/
-                            reward = scaledHaltTime - laneBox[m_CurrentPhase].vehiclewithin;
+                            reward = scaledHaltTime - (laneBox[m_CurrentPhase].vehiclewithin / 8);
                         }
                         else
                             reward = 0f;
@@ -99,8 +99,8 @@ namespace Kawaiiju.Traffic
                             Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
                             RLAgent.EndEpisode();
                         }*/
-
-                        Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
+                        if (debug)
+                            Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
                         RLAgent.EndEpisode();
                     }
                     EndPhase();
@@ -111,6 +111,7 @@ namespace Kawaiiju.Traffic
                     if (RLAgent != null)
                     {
                         RLAgent.RequestDecision();
+                        Debug.Log("phase: " + m_CurrentPhase + " count: " + laneBox[m_CurrentPhase].vehiclewithin + " time: " + phaseInterval);
                     }
                 }
             }

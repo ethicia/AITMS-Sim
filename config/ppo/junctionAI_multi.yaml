@@ -3,8 +3,8 @@ behaviors:
   JunctionAI_1:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 1024
-      buffer_size: 10240
+      batch_size: 64
+      buffer_size: 655360
       learning_rate: 0.03
       beta: 0.005
       epsilon: 0.2
@@ -14,7 +14,7 @@ behaviors:
     network_settings:
       normalize: true
       hidden_units: 128
-      num_layers: 5
+      num_layers: 2
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -25,7 +25,7 @@ behaviors:
         network_settings:
           normalize: true
           hidden_units: 128
-          num_layers: 5
+          num_layers: 2
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -41,8 +41,8 @@ behaviors:
   JunctionAI_2:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 1024
-      buffer_size: 10240
+      batch_size: 64
+      buffer_size: 655360
       learning_rate: 0.03
       beta: 0.005
       epsilon: 0.2
@@ -52,7 +52,7 @@ behaviors:
     network_settings:
       normalize: true
       hidden_units: 128
-      num_layers: 5
+      num_layers: 2
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -63,7 +63,7 @@ behaviors:
         network_settings:
           normalize: true
           hidden_units: 128
-          num_layers: 5
+          num_layers: 2
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -79,8 +79,8 @@ behaviors:
   JunctionAI_3:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 1024
-      buffer_size: 10240
+      batch_size: 64
+      buffer_size: 655360
       learning_rate: 0.03
       beta: 0.005
       epsilon: 0.2
@@ -90,7 +90,7 @@ behaviors:
     network_settings:
       normalize: true
       hidden_units: 128
-      num_layers: 5
+      num_layers: 2
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -101,7 +101,7 @@ behaviors:
         network_settings:
           normalize: true
           hidden_units: 128
-          num_layers: 5
+          num_layers: 2
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
@@ -117,8 +117,8 @@ behaviors:
   JunctionAI_4:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 1024
-      buffer_size: 10240
+      batch_size: 64
+      buffer_size: 655360
       learning_rate: 0.03
       beta: 0.005
       epsilon: 0.2
@@ -128,7 +128,7 @@ behaviors:
     network_settings:
       normalize: true
       hidden_units: 128
-      num_layers: 5
+      num_layers: 2
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -139,14 +139,14 @@ behaviors:
         network_settings:
           normalize: true
           hidden_units: 128
-          num_layers: 5
+          num_layers: 2
           vis_encode_type: simple
           memory: null
           goal_conditioning_type: hyper
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 15
-    max_steps: 500000
+    max_steps: 50000000
     time_horizon: 64
     summary_freq: 5
     threaded: false
@@ -162,20 +162,11 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 100.0
+  time_scale: 20
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false
 environment_parameters: null
-checkpoint_settings:
-  run_id: junctionAI_multi
-  initialize_from: null
-  load_model: false
-  resume: true
-  force: false
-  train_model: false
-  inference: false
-  results_dir: results
 torch_settings:
   device: null
 debug: false

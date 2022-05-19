@@ -9,6 +9,7 @@ public class JunctionRLAgent : Agent
 {
     private Kawaiiju.Traffic.JunctionObservables junctionObservables;
     public GameObject AITMS;
+    public bool useGlobalObservables = false;
     private Kawaiiju.Traffic.GlobalObservables globalObservables;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class JunctionRLAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        if (AITMS == null)
+        if (AITMS == null || !useGlobalObservables)
         {
             //current phase
             sensor.AddObservation(junctionObservables.currentPhase);
@@ -54,18 +55,24 @@ public class JunctionRLAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        for (int i = 0; i < 4; i++)
-        {
-            float scaledInterval = ScaleAction(Mathf.Clamp(actionBuffers.ContinuousActions[i], -1f, 1f),
-            junctionObservables.minimumPhaseInterval, junctionObservables.maximumPhaseInterval);
-            junctionObservables.setPhaseInterval(i, Mathf.RoundToInt(scaledInterval));
-        }
+        //multiple output
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    float scaledInterval = ScaleAction(Mathf.Clamp(actionBuffers.ContinuousActions[i], -1f, 1f),
+        //    junctionObservables.minimumPhaseInterval, junctionObservables.maximumPhaseInterval);
+        //    junctionObservables.setPhaseInterval(i, Mathf.RoundToInt(scaledInterval));
+        //}
+
+        //single output
+        float scaledInterval = ScaleAction(Mathf.Clamp(actionBuffers.ContinuousActions[0], -1f, 1f),
+        junctionObservables.minimumPhaseInterval, junctionObservables.maximumPhaseInterval);
+        junctionObservables.setPhaseInterval(junctionObservables.currentPhase, Mathf.RoundToInt(scaledInterval));
 
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-
+        Debug.Log("Heuristics called");
     }
 
 }

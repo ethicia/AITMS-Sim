@@ -74,14 +74,18 @@ namespace Kawaiiju
                 NavConnection connection = col.GetComponent<NavConnection>();
                 SwitchRoad(connection);
             }
-            if (col.tag == "Detroyer")
+            else if (col.tag == "Detroyer")
             {
                 destroyVehicle();
             }
-            if (col.tag == "FirstLane" || col.tag == "SecondLane" || col.tag == "ThirdLane" || col.tag == "FourthLane")
+            else if (col.tag == "FirstLane" || col.tag == "SecondLane" || col.tag == "ThirdLane" || col.tag == "FourthLane")
             {
                 laneBox = col.gameObject.GetComponent<LaneVehicleCount>();
             }
+            //else if (col.tag == "Untagged")
+            //{
+            //    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+            //}
             base.OnTriggerEnter(col);
         }
 
@@ -91,6 +95,10 @@ namespace Kawaiiju
             {
                 laneBox = null;
             }
+            //else if (col.tag == "Untagged")
+            //{
+            //    gameObject.GetComponent<Rigidbody>().freezeRotation = false;
+            //}
         }
 
         // -------------------------------------------------------------------
@@ -98,7 +106,7 @@ namespace Kawaiiju
 
         private bool m_Blocked;
 
-        private float m_BlockedDistance = 0.75f;
+        private float m_BlockedDistance = 0.5f;
         public float blockedDistance
         {
             get { return m_BlockedDistance; }
