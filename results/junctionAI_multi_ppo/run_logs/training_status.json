@@ -2,232 +2,232 @@
     "JunctionAI_3": {
         "checkpoints": [
             {
-                "steps": 1124,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1124.onnx",
-                "reward": -1.200964137127525,
-                "creation_time": 1653142303.588998,
+                "steps": 3794,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3794.onnx",
+                "reward": -1.2735140357377395,
+                "creation_time": 1653686419.4150105,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1124.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3794.pt"
                 ]
             },
             {
-                "steps": 1139,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1139.onnx",
-                "reward": -1.1786958084386938,
-                "creation_time": 1653142479.585064,
+                "steps": 3809,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3809.onnx",
+                "reward": -1.2845418216551052,
+                "creation_time": 1653686571.9549544,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1139.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3809.pt"
                 ]
             },
             {
-                "steps": 1154,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1154.onnx",
-                "reward": -1.1867992634675941,
-                "creation_time": 1653142682.2722375,
+                "steps": 3824,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3824.onnx",
+                "reward": -1.2887165776218277,
+                "creation_time": 1653686715.3156471,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1154.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3824.pt"
                 ]
             },
             {
-                "steps": 1169,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1169.onnx",
-                "reward": -1.2153232917189598,
-                "creation_time": 1653142935.4960742,
+                "steps": 3839,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3839.onnx",
+                "reward": -1.2880549923497804,
+                "creation_time": 1653686852.6833932,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1169.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3839.pt"
                 ]
             },
             {
-                "steps": 1170,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1170.onnx",
-                "reward": null,
-                "creation_time": 1653142948.5315087,
+                "steps": 3847,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3847.onnx",
+                "reward": -1.2870202295060427,
+                "creation_time": 1653686914.3302262,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1170.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3847.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1170,
+            "steps": 3847,
             "file_path": "results/junctionAI_multi_ppo/JunctionAI_3.onnx",
-            "reward": null,
-            "creation_time": 1653142948.5315087,
+            "reward": -1.2870202295060427,
+            "creation_time": 1653686914.3302262,
             "auxillary_file_paths": [
-                "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-1170.pt"
-            ]
-        }
-    },
-    "JunctionAI_2": {
-        "checkpoints": [
-            {
-                "steps": 1049,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1049.onnx",
-                "reward": -1.2878796921836004,
-                "creation_time": 1653142201.4366338,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1049.pt"
-                ]
-            },
-            {
-                "steps": 1064,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1064.onnx",
-                "reward": -1.3259970247745514,
-                "creation_time": 1653142481.4941134,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1064.pt"
-                ]
-            },
-            {
-                "steps": 1079,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1079.onnx",
-                "reward": -1.236000968859746,
-                "creation_time": 1653142657.3271005,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1079.pt"
-                ]
-            },
-            {
-                "steps": 1094,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1094.onnx",
-                "reward": -1.1883850196997325,
-                "creation_time": 1653142840.6213665,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1094.pt"
-                ]
-            },
-            {
-                "steps": 1100,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1100.onnx",
-                "reward": -1.1884321242570877,
-                "creation_time": 1653142948.4313269,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1100.pt"
-                ]
-            }
-        ],
-        "final_checkpoint": {
-            "steps": 1100,
-            "file_path": "results/junctionAI_multi_ppo/JunctionAI_2.onnx",
-            "reward": -1.1884321242570877,
-            "creation_time": 1653142948.4313269,
-            "auxillary_file_paths": [
-                "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-1100.pt"
-            ]
-        }
-    },
-    "JunctionAI_1": {
-        "checkpoints": [
-            {
-                "steps": 944,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-944.onnx",
-                "reward": -1.239181969095679,
-                "creation_time": 1653141827.2517438,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-944.pt"
-                ]
-            },
-            {
-                "steps": 959,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-959.onnx",
-                "reward": -1.301550027059049,
-                "creation_time": 1653142099.2914205,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-959.pt"
-                ]
-            },
-            {
-                "steps": 974,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-974.onnx",
-                "reward": -1.3146649459376931,
-                "creation_time": 1653142398.65861,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-974.pt"
-                ]
-            },
-            {
-                "steps": 989,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-989.onnx",
-                "reward": -1.3133522868156433,
-                "creation_time": 1653142682.4902718,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-989.pt"
-                ]
-            },
-            {
-                "steps": 1003,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-1003.onnx",
-                "reward": -1.3618678067411696,
-                "creation_time": 1653142948.4809182,
-                "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-1003.pt"
-                ]
-            }
-        ],
-        "final_checkpoint": {
-            "steps": 1003,
-            "file_path": "results/junctionAI_multi_ppo/JunctionAI_1.onnx",
-            "reward": -1.3618678067411696,
-            "creation_time": 1653142948.4809182,
-            "auxillary_file_paths": [
-                "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-1003.pt"
+                "results/junctionAI_multi_ppo/JunctionAI_3/JunctionAI_3-3847.pt"
             ]
         }
     },
     "JunctionAI_4": {
         "checkpoints": [
             {
-                "steps": 944,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-944.onnx",
-                "reward": -1.1725603745264166,
-                "creation_time": 1653142262.1456823,
+                "steps": 4559,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4559.onnx",
+                "reward": -1.2643784176219592,
+                "creation_time": 1653686506.402301,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-944.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4559.pt"
                 ]
             },
             {
-                "steps": 959,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-959.onnx",
-                "reward": -1.1610863038471766,
-                "creation_time": 1653142476.4157195,
+                "steps": 4574,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4574.onnx",
+                "reward": -1.2532597234693623,
+                "creation_time": 1653686641.7593467,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-959.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4574.pt"
                 ]
             },
             {
-                "steps": 974,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-974.onnx",
-                "reward": -1.1592547176405787,
-                "creation_time": 1653142645.7888327,
+                "steps": 4589,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4589.onnx",
+                "reward": -1.253852618707193,
+                "creation_time": 1653686761.7544765,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-974.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4589.pt"
                 ]
             },
             {
-                "steps": 989,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-989.onnx",
-                "reward": -1.139177565063749,
-                "creation_time": 1653142834.2856505,
+                "steps": 4604,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4604.onnx",
+                "reward": -1.2393531189875657,
+                "creation_time": 1653686875.6085765,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-989.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4604.pt"
                 ]
             },
             {
-                "steps": 996,
-                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-996.onnx",
-                "reward": -1.1264886118116832,
-                "creation_time": 1653142948.3803642,
+                "steps": 4609,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4609.onnx",
+                "reward": -1.2446529846242134,
+                "creation_time": 1653686914.1316812,
                 "auxillary_file_paths": [
-                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-996.pt"
+                    "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4609.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 996,
+            "steps": 4609,
             "file_path": "results/junctionAI_multi_ppo/JunctionAI_4.onnx",
-            "reward": -1.1264886118116832,
-            "creation_time": 1653142948.3803642,
+            "reward": -1.2446529846242134,
+            "creation_time": 1653686914.1316812,
             "auxillary_file_paths": [
-                "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-996.pt"
+                "results/junctionAI_multi_ppo/JunctionAI_4/JunctionAI_4-4609.pt"
+            ]
+        }
+    },
+    "JunctionAI_1": {
+        "checkpoints": [
+            {
+                "steps": 4154,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4154.onnx",
+                "reward": -1.2438496420016656,
+                "creation_time": 1653686447.116025,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4154.pt"
+                ]
+            },
+            {
+                "steps": 4169,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4169.onnx",
+                "reward": -1.1873564458474881,
+                "creation_time": 1653686580.059316,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4169.pt"
+                ]
+            },
+            {
+                "steps": 4184,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4184.onnx",
+                "reward": -1.163146666118077,
+                "creation_time": 1653686718.3914962,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4184.pt"
+                ]
+            },
+            {
+                "steps": 4199,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4199.onnx",
+                "reward": -1.1715919283074392,
+                "creation_time": 1653686851.446839,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4199.pt"
+                ]
+            },
+            {
+                "steps": 4207,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4207.onnx",
+                "reward": -1.173014630245257,
+                "creation_time": 1653686914.2443664,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4207.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4207,
+            "file_path": "results/junctionAI_multi_ppo/JunctionAI_1.onnx",
+            "reward": -1.173014630245257,
+            "creation_time": 1653686914.2443664,
+            "auxillary_file_paths": [
+                "results/junctionAI_multi_ppo/JunctionAI_1/JunctionAI_1-4207.pt"
+            ]
+        }
+    },
+    "JunctionAI_2": {
+        "checkpoints": [
+            {
+                "steps": 4454,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4454.onnx",
+                "reward": -1.0926396680228851,
+                "creation_time": 1653686459.179283,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4454.pt"
+                ]
+            },
+            {
+                "steps": 4469,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4469.onnx",
+                "reward": -1.1206597757626728,
+                "creation_time": 1653686587.8355157,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4469.pt"
+                ]
+            },
+            {
+                "steps": 4484,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4484.onnx",
+                "reward": -1.1146556777613503,
+                "creation_time": 1653686706.9066956,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4484.pt"
+                ]
+            },
+            {
+                "steps": 4499,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4499.onnx",
+                "reward": -1.1274733058119242,
+                "creation_time": 1653686825.3125947,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4499.pt"
+                ]
+            },
+            {
+                "steps": 4512,
+                "file_path": "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4512.onnx",
+                "reward": -1.1241790595508756,
+                "creation_time": 1653686914.020819,
+                "auxillary_file_paths": [
+                    "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4512.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4512,
+            "file_path": "results/junctionAI_multi_ppo/JunctionAI_2.onnx",
+            "reward": -1.1241790595508756,
+            "creation_time": 1653686914.020819,
+            "auxillary_file_paths": [
+                "results/junctionAI_multi_ppo/JunctionAI_2/JunctionAI_2-4512.pt"
             ]
         }
     },
