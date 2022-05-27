@@ -32,16 +32,30 @@ namespace Kawaiiju.Traffic
             }
         }
 
-        public float getAvgHaltTime()
+        public float getAvgHaltTime(bool reset)
         {
 
             if (vehicleCount == 0) return 0f;
 
             float temp = totalHaltTime / vehicleCount;
 
-            totalHaltTime = 0f;
-            vehicleCount = 0;
+            if (reset)
+            {
+                vehicleCount = 0;
+                totalHaltTime = 0;
+            }
 
+            return temp;
+        }
+
+        public int getVehicleCount(bool reset)
+        {
+            int temp = vehicleCount;
+            if (reset)
+            {
+                vehicleCount = 0;
+                totalHaltTime = 0;
+            }
             return temp;
         }
     }

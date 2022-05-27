@@ -81,11 +81,15 @@ namespace Kawaiiju.Traffic
                         //scaling reward
                         if (minCycle != maxCycle)
                         {
-                            scaledHaltTime = (collector.getAvgHaltTime() - minCycle) / (maxCycle - minCycle);
-                            /*totalLaneCount = 0;
-                            for (int i = 0; i < phases.Length; i++)
-                                totalLaneCount += laneBox[i].vehiclewithin;
-                            reward = scaledHaltTime - (totalLaneCount / phases.Length);*/
+                            scaledHaltTime = (collector.getAvgHaltTime(true) - minCycle) / (maxCycle - minCycle);
+
+                            //using total vehicle count
+                            //totalLaneCount = 0;
+                            //for (int i = 0; i < phases.Length; i++)
+                            //    totalLaneCount += laneBox[i].vehiclewithin;
+                            //reward = scaledHaltTime - (totalLaneCount / phases.Length);
+
+                            //using default reward mechanism
                             reward = scaledHaltTime - (laneBox[m_CurrentPhase].vehiclewithin / 8);
                         }
                         else
@@ -93,12 +97,14 @@ namespace Kawaiiju.Traffic
 
                         RLAgent.AddReward(reward);
 
-                        /*
-                        if (m_CurrentPhase == 3)
-                        {
-                            Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
-                            RLAgent.EndEpisode();
-                        }*/
+                        //resetting after 4 phases
+                        //if (m_CurrentPhase == 3)
+                        //{
+                        //    Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
+                        //    RLAgent.EndEpisode();
+                        //}
+
+                        //resetting after every phase
                         if (debug)
                             Debug.Log("cumulative reward: " + RLAgent.GetCumulativeReward());
                         RLAgent.EndEpisode();
@@ -162,11 +168,6 @@ namespace Kawaiiju.Traffic
         {
             m_PhaseTimer = 0;
             m_PhaseEnded = false;
-            /*
-            if (m_CurrentPhase < phases.Length - 1)
-                m_CurrentPhase++;
-            else
-                m_CurrentPhase = 0;*/
             m_CurrentPhase = (m_CurrentPhase + 1) % phases.Length;
 
             //assigning current phase

@@ -3,9 +3,9 @@ behaviors:
   JunctionAI_1:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 64
-      buffer_size: 655360
-      learning_rate: 0.03
+      batch_size: 8
+      buffer_size: 64
+      learning_rate: 0.003
       beta: 0.005
       epsilon: 0.2
       lambd: 0.95
@@ -41,9 +41,9 @@ behaviors:
   JunctionAI_2:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 64
-      buffer_size: 655360
-      learning_rate: 0.03
+      batch_size: 8
+      buffer_size: 64
+      learning_rate: 0.003
       beta: 0.005
       epsilon: 0.2
       lambd: 0.95
@@ -79,9 +79,9 @@ behaviors:
   JunctionAI_3:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 64
-      buffer_size: 655360
-      learning_rate: 0.03
+      batch_size: 8
+      buffer_size: 64
+      learning_rate: 0.003
       beta: 0.005
       epsilon: 0.2
       lambd: 0.95
@@ -117,9 +117,9 @@ behaviors:
   JunctionAI_4:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 64
-      buffer_size: 655360
-      learning_rate: 0.03
+      batch_size: 8
+      buffer_size: 64
+      learning_rate: 0.003
       beta: 0.005
       epsilon: 0.2
       lambd: 0.95
@@ -162,7 +162,7 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 20
+  time_scale: 10
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false
